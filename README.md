@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 1) Le projet VisNum en bref
 2) Plan du projet VisNum
-3) Préparation des données
+3) Sources diverses
 4) Design de l'application
 5) Brève description de l'architecture de l'app. VisNum
 6) Pages et fonctionnalités principales de l'application VisNum 
@@ -47,15 +47,18 @@ Le projet comprend les phases suivantes :
 1.  Définition du projet
 2.  Préparation des données
 
+_____________________________________________________________________________________________________________________________________
+## 3) Sources diverses
 
+Code/données
 _____________________________________________________________________________________________________________________________________
 
-## 3) Design de l'application :
+## 4) Design de l'application :
 
 Le design de l'application a été fait à l'aide du logiciel 
 _____________________________________________________________________________________________________________________________________
 
-## 4) Brève description de l'architecture de l'app. VisNum :
+## 5) Brève description de l'architecture de l'app. VisNum :
 
 Les principaux composants de l'application NUA sont :
 
@@ -67,7 +70,7 @@ Les principaux composants de l'application NUA sont :
 
 _____________________________________________________________________________________________________________________________________
 
-## 5) Pages et fonctionnalités principales de l'application NUA :
+## 6) Pages et fonctionnalités principales de l'application NUA :
 
 Les pages principales de la version prototype disponibles sont :
 
@@ -79,19 +82,19 @@ Les fonctionnalités principales sont :
 
 _____________________________________________________________________________________________________________________________________
 
-## 6) Tests et validation de l'application :
+## 7) Tests et validation de l'application :
 
 Work in progress
 _____________________________________________________________________________________________________________________________________
 
-## 7) Documentation et mode d'emploi :
+## 8) Documentation et mode d'emploi :
 
 L'application VisNum est "self-explanatory" et l'information fournie sur ce README fait office de mode d'emploi.
 
 _____________________________________________________________________________________________________________________________________
 
 
-## 8) Evolution du projet VisNum :
+## 9) Evolution du projet VisNum :
 
 En fonction du temps à disposition des fonctionnalités supplémentaires telles que définies dans le full-version design viendront s'ajouter à celles présentes dans la version prototype.
 
