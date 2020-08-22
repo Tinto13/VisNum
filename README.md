@@ -2,7 +2,7 @@
 Projets de visualisation de données UNIL
 
 
-## Cours Unil : Visuallisation de données
+## Cours Unil : Visualisation de données (WORK IN PROGRESS)
 
 **Professeur :** Loïc Cattani   
 
