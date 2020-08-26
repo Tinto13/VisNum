@@ -70,6 +70,11 @@ h4 {
 #colorbutton3:hover{
     background-color: rgb(172, 169, 165);
 }
+#textAnnee{
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration : underline
+}
 /*#dataVisual02{
 
      border: thin solid red;
