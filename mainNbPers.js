@@ -1,8 +1,8 @@
 // définition des dimensions et des marges du graphe
 
 const margin = {top: 100, right: 0, bottom: 0, left: 0},
-   width =800 - margin.left - margin.right,
-   height = 800 - margin.top - margin.bottom,
+   width =1000 - margin.left - margin.right,
+   height = 1000 - margin.top - margin.bottom,
    innerRadius = 50;
 
 // définition des valeurs globales
@@ -63,7 +63,7 @@ function loadData (data) {
    // on efface tout svg existant
    d3.select("svg").remove(); 
 
-   // affichage du titre du graphe et de l'année correspondante
+   // affichage de la légende du graphe et de l'année correspondante
 
    let txtTitre = document.getElementById("textAnnee");
     txtTitre.innerHTML = "Statistiques en nombre de personnes pour l'année : "+nameInFile;

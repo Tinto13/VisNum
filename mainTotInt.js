@@ -1,7 +1,7 @@
 // définition des dimensions et des marges du graphe
 
 const margin = {top: 100, right: 0, bottom: 0, left: 0},
-   width = 1000 - margin.left - margin.right,
+   width = 850 - margin.left - margin.right,
    height = 1000 - margin.top - margin.bottom,
    innerRadius = 50;
 
@@ -13,6 +13,8 @@ let radbData;
 // échelles des axes
 let radbScalex;
 let radbScaley;
+
+// année traitée pour les statistiques
 let nameInFile;
 
 // éléments du graphe, barres et titres
@@ -27,7 +29,8 @@ radbTopMargin = 50;
 outerRadius = Math.min(width, height) / 2;  
 
 nameInFile = "2010";
-   
+
+// activation par le choix de l'année voulue
 document.getElementById("annee").addEventListener("change", function (e) {
     
     nameInFile = e.target.value;
@@ -58,68 +61,76 @@ function loadData (data) {
    console.log(data);
    console.log(radbData);
       
-   // création du svg au moyen d'une div
-   d3.select("svg").remove(); 
-   let svg = d3.select("#dataVisual02")
-      .append("svg")
-      .attr("width", width )
-      .attr("height", height )
-      //.attr("style", "border: thin solid red;")
-      
+   // on efface tout svg existant
+   d3.select("svg").remove();
+   
+    // affichage de la légende du graphe et de l'année correspondante
+
+    let txtTitre = document.getElementById("textAnnee");
+    txtTitre.innerHTML = "Statistiques en % des Internautes pour l'année : "+nameInFile;
+    document.body.appendChild(txtTitre);
+
+    // création du svg au moyen d'une div
+    let svg = d3.select("#dataVisual02")
+    .append("svg")
+    .attr("width", width )
+    .attr("height", height )
+    //.attr("style", "border: thin solid red;")
+    
     // définition de l'échelle x
-   radbScalex = d3.scaleBand()
-      .range([0.15, (2 * Math.PI)-0.15])   // l'axe X va de 0.1 à 2 Pi
-      .align(0)                  // scaling à vérifier
-      .domain(data.map(function(d) { return d.nomaxe; })); // le domaine de l'axe x est l'ordinal du fichier d'input
-   
-   // définition de l'échelle y
-   radbScaley = d3.scaleRadial()
-      // définition dynamique du range
-      .range([innerRadius, outerRadius]) 
-      // définition dynamique du domain en fonction de la valeur max du fichier d'input
-      .domain([0, d3.max(data, d => d.param*2)]);
+    radbScalex = d3.scaleBand()
+        .range([0.15, (2 * Math.PI)-0.15])   // l'axe X va de 0.1 à 2 Pi
+        .align(0)                  // scaling à vérifier
+        .domain(data.map(function(d) { return d.nomaxe; })); // le domaine de l'axe x est l'ordinal du fichier d'input
 
-    // groupage pour préparer et passer les barres 
-    radbBars = svg.append('g')
-      .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")"); // centrage dynamique du graphe
-     
-    // groupage pour préparer et passer les titres des barres
-    radbTitles = svg.append("g")
-        .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
+    // définition de l'échelle y
+    radbScaley = d3.scaleRadial()
+        // définition dynamique du range
+        .range([innerRadius, outerRadius]) 
+        // définition dynamique du domain en fonction de la valeur max du fichier d'input
+        .domain([0, d3.max(data, d => d.param*2)]);
 
-    // groupage pour préparer et passer les valeurs dans les barres
-    radbValues = svg.append("g")
-        .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
+        // groupage pour préparer et passer les barres 
+        radbBars = svg.append('g')
+        .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")"); // centrage dynamique du graphe
+        
+        // groupage pour préparer et passer les titres des barres
+        radbTitles = svg.append("g")
+            .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
 
-    // Dessin de la grille radar
+        // groupage pour préparer et passer les valeurs dans les barres
+        radbValues = svg.append("g")
+            .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
 
-    let radarGrid = d3.scaleLinear()
-      .domain([0,10])
-      .range([0,450]);
-      
-   let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5];
+        // Dessin de la grille radar
 
-   radarSteps.forEach(d =>
-      svg.append("circle")
-      .attr("cx", width/2)
-      .attr("cy", height/2-radbTopMargin)
-      .attr("fill", "none")
-      .attr("stroke", "white")
-      .style("opacity", 0.5)
-      .attr("r", radarGrid(d))
-   );
+        let radarGrid = d3.scaleLinear()
+        .domain([0,10])
+        .range([0,450]);
+        
+    let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5];
 
-   radarSteps.forEach(d =>
-      svg.append("text")
-      .attr("x", width/2-1 )
-      .attr("y", (height/2-radbTopMargin)- radarGrid(d) - 5)
-      .text(d.toString())
-      .attr("font-weight","bold")
-      .style("font-size","8px")
-   );   
+    radarSteps.forEach(d =>
+        svg.append("circle")
+        .attr("cx", width/2)
+        .attr("cy", height/2-radbTopMargin)
+        .attr("fill", "none")
+        .attr("stroke", "white")
+        .style("opacity", 0.5)
+        .attr("r", radarGrid(d))
+    );
 
-   
-   // Appel de la fonction de dessin du graphe
+    radarSteps.forEach(d =>
+        svg.append("text")
+        .attr("x", width/2-1 )
+        .attr("y", (height/2-radbTopMargin)- radarGrid(d) - 5)
+        .text(d.toString())
+        .attr("font-weight","bold")
+        .style("font-size","8px")
+    );   
+
+
+// Appel de la fonction de dessin du graphe
     graphRadBar();
 
 }
