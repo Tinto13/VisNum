@@ -179,6 +179,8 @@ function graphRadBar () {
         .endAngle(d => radbScalex(d.nomaxe) + radbScalex.bandwidth())
         .padAngle(0.05) 
         .padRadius(innerRadius-10))
+        
+          
 
     // ajout du texte sur les barres
     radbTitles.selectAll("g")
