@@ -127,6 +127,7 @@ function loadData (data) {
         .attr("r", radarGrid(d))
     );
 
+/*
     radarSteps.forEach(d =>
         svg.append("text")
         .attr("x", width/2-1 )
@@ -136,7 +137,7 @@ function loadData (data) {
         .style("font-size","8px")
     );   
 
-   
+*/
    // Appel de la fonction de dessin du graphe
     graphRadBar();
 
@@ -209,6 +210,3 @@ function graphRadBar () {
             .attr("alignment-baseline", "middle")
               
 };
-
-// démarrage du script
-//startProg();
