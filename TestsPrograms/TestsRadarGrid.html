@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tests Radar Grid</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+
+    
+    <h1>Radial Bar visualisation program of Internet use in Switzerland</h1>
+    <p>Data Source : Office Fédéral de la Statistique</p>
+
+    <!-- Create a div where the graph will take place -->
+
+    <div id="dataVisual02"></div>
+
+<script>
+
+
+// définition des dimensions et des marges du graphe
+
+let margin = {top: 100, right: 0, bottom: 0, left: 0},
+   width = 1200 - margin.left - margin.right,
+   height = 1200 - margin.top - margin.bottom,
+   innerRadius = 60;
+
+   // création du svg au moyen d'une div
+   let svg = d3.select("#dataVisual02")
+      .append("svg")
+      .attr("width", width )
+      .attr("height", height )
+      .attr("style", "outline: thin solid red;")
+
+   testGrid();
+   
+   function testGrid(){
+
+      radGrid();
+
+   }
+   
+
+   function radGrid(){
+
+      // Dessin de la grille radar
+
+      let radarGrid = d3.scaleLinear()
+         .domain([0,5])
+         .range([0,250]);
+      
+      let radarSteps = [2,4,6,8,10];
+
+      radarSteps.forEach(d =>
+         svg.append("circle")
+         .attr("cx", width/2)
+         .attr("cy", height/2)
+         .attr("fill", "none")
+         .attr("stroke", "black")
+         .attr("r", radarGrid(d))
+      );
+
+      radarSteps.forEach(d =>
+         svg.append("text")
+         .attr("x", width/2)
+         .attr("y", height/2 - radarGrid(d))
+         .text(d.toString())
+);
+}
+
+
+
+</script>
+
+    
+</body>
+
+</html>

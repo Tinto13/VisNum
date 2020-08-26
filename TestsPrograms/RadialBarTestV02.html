@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadialBar Graph tests V02</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- On charge d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+
+    <!-- On écrit les titres et les data sources -->
+    <h1>Radial Bar visualisation program of Internet use in Switzerland</h1>
+    <p>Data Source : Office Fédéral de la Statistique</p>
+
+    <!-- Création d'une div pour l'afficahge du graphe -->
+
+    <div id="dataVisual02"></div>
+
+
+
+<script>
+/* Version initiale avec données dans tableau puis dans fichier csv*/
+
+// définition des dimensions et des marges du graphe
+
+let margin = {top: 100, right: 0, bottom: 0, left: 0},
+   width = 1200 - margin.left - margin.right,
+   height = 1200 - margin.top - margin.bottom,
+   innerRadius = 60;
+
+
+// définition des données d'input
+d3.csv('datainput.csv', function (d) {
+   return {
+      nomaxe: d.variable,
+      valeur: d.value
+   }
+}).then(function(data) {
+   console.log(data); 
+});
+
+// définition du tableau des valeurs initiales
+const number = [
+             {nval: 0},
+             {nval: 10},
+             {nval: 8},
+             {nval: 3},
+             {nval: 4},
+             {nval: 13},
+             {nval: 5},
+             {nval: 7},
+             {nval: 17},
+             {nval: 16},
+             {nval: 19},
+             {nval: 14},
+             {nval: 15},
+             {nval: 9}
+            ];
+
+
+// création du svg au moyen d'une div
+
+let svg = d3.select("#dataVisual02")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+
+
+// échelle x
+ const x = d3.scaleBand()
+      .range([0, 2 * Math.PI])    // l'axe X va de 0 à 2 Pi
+      .domain( number.map(function(d) { return d.nval; }) ); // le domaine de l'axe x est le tableau number
+ // Y scale
+ const y = d3.scaleLinear()
+      .range([100, 180])   // rayon interne à rayon externe
+      .domain([0, 13]); // domaine à définir
+
+// ajout du groupe des segments circulaires
+svg.append("g")
+  .style("fill","blue")
+  .attr('stroke', 'black')
+  .attr("transform", "translate(" + width / 2 + "," + ( height/2)+ ")") // centrage dynamique du graphe
+  .selectAll("path")
+  .data(number)
+  .enter()
+  .append("path")
+  .attr("d", d3.arc()
+    .innerRadius( innerRadius )
+ // .outerRadius(function(d) { return y(d["nval"]); })
+    .outerRadius(d => y(d["nval"]))
+ // .startAngle(function(d) { return x(d.nval); })
+    .startAngle(d => x(d.nval))
+ // .endAngle(function(d) { return x(d.nval) + x.bandwidth(); })
+    .endAngle(d => x(d.nval) + x.bandwidth())
+    .padAngle(0.05)
+    .padRadius(150))
+       
+
+// définition de l'échelle et de la position de l'axe x           
+let xScale = d3.scaleLinear()
+               .domain([0, 400])
+               .range([0, 250])
+
+let xAxis = d3.axisTop().scale(xScale);
+
+
+// définition de l'échelle et de la position de l'axe y           
+let yScale = d3.scaleLinear()
+               .domain([0, 400])
+               .range([0, 250])
+let yAxis = d3.axisLeft().scale(yScale);
+
+// groupage et ajout des axes
+svg.append('g')
+   .attr('transform',"translate(" + width/2 + "," + ( height/2)+ ")")
+   .call(yAxis);
+
+svg.append('g')
+   .attr('transform',"translate(" + width / 2 + "," + ( height/2)+ ")")
+   .call(xAxis);
+
+svg.append('circle')
+   .attr("cx", width/2)
+   .attr("cy", height/2)
+   .attr("fill","transparent")
+   .attr('stroke', 'black')
+   .attr("r", 30);
+
+
+
+
+</script>
+
+    
+</body>
+</html>
