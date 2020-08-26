@@ -40,7 +40,7 @@ document.getElementById("annee").addEventListener("change", function (e) {
 function startInputFile(){
     console.log("impression1"+nameInFile);
     //d3.csv('2019 csv.csv', function (d) {
-    d3.csv(`${nameInFile} csv.csv`, function (d) {
+    d3.csv(`DataFiles/${nameInFile} csv.csv`, function (d) {
     return {
         nomaxe: d.Nomaxe,
         param: d.TotPopul        
