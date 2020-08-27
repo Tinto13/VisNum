@@ -2,7 +2,7 @@
 
 const margin = {top: 100, right: 0, bottom: 0, left: 0},
    width = 1000 - margin.left - margin.right,
-   height = 1000 - margin.top - margin.bottom,
+   height = 1150 - margin.top - margin.bottom,
    innerRadius = 50;
 
 // définition des valeurs globales
@@ -76,7 +76,7 @@ function loadData (data) {
         
         // définition de l'échelle x
     radbScalex = d3.scaleBand()
-        .range([0.15, (2 * Math.PI)-0.15])   // l'axe X va de 0.1 à 2 Pi
+        .range([0, (2 * Math.PI)])   // l'axe X va de 0 à 2 Pi
         .align(0)                  // scaling à vérifier
         .domain(data.map(function(d) { return d.nomaxe; })); // le domaine de l'axe x est l'ordinal du fichier d'input
     
@@ -105,7 +105,7 @@ function loadData (data) {
         .domain([0,10])
         .range([0,450]);
         
-    let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5];
+    let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5];
 
     radarSteps.forEach(d =>
         svg.append("circle")
@@ -118,16 +118,7 @@ function loadData (data) {
         .style("opacity", 0.5)
     );
 
-    radarSteps.forEach(d =>
-        svg.append("text")
-        .attr("x", width/2-1 )
-        .attr("y", (height/2-radbTopMargin)- radarGrid(d) - 5)
-        .text(d.toString())
-        .attr("font-weight","bold")
-        .style("font-size","8px")
-    );   
-
-    
+        
    // Appel de la fonction de dessin du graphe
     graphRadBar();
 
