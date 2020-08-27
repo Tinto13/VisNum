@@ -117,14 +117,13 @@ function loadData (data) {
     */
 
     // Dessin de la grille radar
-
+    //.domain([0, d3.max(data, d => d.param/1000000)])
+    
     let radarGrid = d3.scaleLinear()
-      //.domain([0,10])
-      .domain([0, d3.max(data, d => d.param/1000000)])
-      .range([0,450]);
-      
-      
-    let radarSteps = [1,1.5,2,2.5,3,3.5,4,4.5];
+        .domain([0,10])
+        .range([0,450]);
+        
+    let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8];
 
     radarSteps.forEach(d =>
         svg.append("circle")
@@ -134,6 +133,7 @@ function loadData (data) {
         .attr("stroke", "white")
         .style("opacity", 0.5)
         .attr("r", radarGrid(d))
+    
     );
 
 /* Code pour ajout de texte sur la grille gardé pour une éventuelle extension
