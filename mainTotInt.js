@@ -1,7 +1,7 @@
 // définition des dimensions et des marges du graphe
 
 const margin = {top: 100, right: 0, bottom: 0, left: 0},
-   width = 850 - margin.left - margin.right,
+   width = 1000 - margin.left - margin.right,
    height = 1000 - margin.top - margin.bottom,
    innerRadius = 50;
 

@@ -1,7 +1,7 @@
 // définition des dimensions et des marges du graphe
 
 const margin = {top: 100, right: 0, bottom: 0, left: 0},
-   width = 850 - margin.left - margin.right,
+   width = 1000 - margin.left - margin.right,
    height = 1000 - margin.top - margin.bottom,
    innerRadius = 50;
 
@@ -42,7 +42,7 @@ document.getElementById("annee").addEventListener("change", function (e) {
 // Lecture du ficher csv d'input et utilisation de la fonction callback
 function startInputFile(){
     console.log("impression1"+nameInFile);
-    //d3.csv('2019 csv.csv', function (d) {
+     
     d3.csv(`DataFiles/${nameInFile} csv.csv`, function (d) {
     return {
         nomaxe: d.Nomaxe,

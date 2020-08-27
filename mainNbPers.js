@@ -2,7 +2,7 @@
 
 const margin = {top: 100, right: 0, bottom: 0, left: 0},
    width =1000 - margin.left - margin.right,
-   height = 1000 - margin.top - margin.bottom,
+   height = 1150 - margin.top - margin.bottom,
    innerRadius = 50;
 
 // définition des valeurs globales
@@ -78,7 +78,7 @@ function loadData (data) {
       
     // définition de l'échelle x
    radbScalex = d3.scaleBand()
-      .range([0.15, (2 * Math.PI)-0.15])   // l'axe X va de 0.15 à 2 Pi-015
+      .range([0, (2 * Math.PI)])   // l'axe X va de 0 à 2 Pi
       .align(0)                  // scaling à vérifier
       .domain(data.map(function(d) { return d.nomaxe; })); // le domaine de l'axe x est l'ordinal du fichier d'input
    
@@ -101,27 +101,30 @@ function loadData (data) {
     radbValues = svg.append("g")
         .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
     
-    // dessin de l'axe vertical
+    /* dessin de l'axe vertical gardé en réserve pour extension
 
-    let valeur = 15;
-    let svgHeight = 500;
-    let yScale = d3.scaleLinear()
-                   .domain([0, valeur])
-                   .range([svgHeight-300, 0])
+    let yScale = d3.scaleRadial()
+        //.domain([0, 7])
+        .domain([0, d3.max(data, d => d.param/1000000)])
+        //.range([svgHeight, 0])
+        .range([300, 0]);
+
     let yAxis = d3.axisLeft().scale(yScale);
     
     svg.append('g')
-       .attr('transform',"translate(" + width / 2 + "," + ( height/2-radbTopMargin-5*innerRadius)+ ")")
+       .attr('transform',"translate(" + (width / 2+5)  + "," + innerRadius + ")")
        .call(yAxis);
+    */
 
     // Dessin de la grille radar
 
     let radarGrid = d3.scaleLinear()
-      .domain([0,10])
+      //.domain([0,10])
+      .domain([0, d3.max(data, d => d.param/1000000)])
       .range([0,450]);
       
       
-    let radarSteps = [1,1.5,2,2.5,3,3.5,4,4.5,5,5.5];
+    let radarSteps = [1,1.5,2,2.5,3,3.5,4,4.5];
 
     radarSteps.forEach(d =>
         svg.append("circle")
@@ -133,7 +136,8 @@ function loadData (data) {
         .attr("r", radarGrid(d))
     );
 
-/*
+/* Code pour ajout de texte sur la grille gardé pour une éventuelle extension
+
     radarSteps.forEach(d =>
         svg.append("text")
         .attr("x", width/2-1 )
