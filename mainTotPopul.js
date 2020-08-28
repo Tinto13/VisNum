@@ -165,6 +165,7 @@ function graphRadBar () {
             .text(d => d.nomaxe)
             .attr("transform", function(d) { return (radbScalex(d.nomaxe) + radbScalex.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
             //.style("stroke", "blue")
+            .attr("fill","blue")
             .style("font-size", "12px")
             .attr("font-weight","bold")
             .attr("alignment-baseline", "middle")
