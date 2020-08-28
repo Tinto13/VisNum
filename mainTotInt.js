@@ -72,10 +72,10 @@ function loadData (data) {
 
     // création du svg au moyen d'une div
     let svg = d3.select("#dataVisual02")
-    .append("svg")
-    .attr("width", width )
-    .attr("height", height )
-    //.attr("style", "border: thin solid red;")
+        .append("svg")
+        .attr("width", width )
+        .attr("height", height )
+        //.attr("style", "border: thin solid red;")
     
     // définition de l'échelle x
     radbScalex = d3.scaleBand()
@@ -136,7 +136,7 @@ function graphRadBar () {
         .interpolator(d3.interpolateHsl("yellow","blue"));
     
     // ajout du groupe des segments (barres) circulaires
-    radbBars.selectAll("path")
+    radbBars.selectAll("path" )
     .data(radbData)
     .enter()
     .append("path")
@@ -153,7 +153,7 @@ function graphRadBar () {
         .startAngle(d => radbScalex(d.nomaxe))
         // définition dynamique de endAngle selon fichier d'input
         .endAngle(d => radbScalex(d.nomaxe) + radbScalex.bandwidth())
-       .padAngle(0.01)
+        .padAngle(0.01)
         .padRadius(innerRadius-10))
   
     // ajout du texte sur les barres

@@ -141,6 +141,7 @@ function graphRadBar () {
     //.style("fill", "#e8c8a9")
     .style('fill',d => radColor(d.param))
     .attr('stroke', 'black')
+    .attr("id","namePath")
     // utilisation de la fonction d3.arc pour dessiner les barres
     .attr("d", d3.arc()
         // définition de innerRadius
