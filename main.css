@@ -74,11 +74,11 @@ h4 {
 }
 #textAnnee{
     background-color: whitesmoke;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     color:rgba(128, 32, 218, 0.986);
     position: absolute;
-	top: 250px;
+	top: 230px;
     right: 15px;
         
 }
