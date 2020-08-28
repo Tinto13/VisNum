@@ -31,6 +31,9 @@ h4 {
     font-size: 20px;
     font-weight: normal;
 }
+#contValues{
+    width:1100px;
+}
 #entete {
     padding: 1px;
     margin-left: 1px;
@@ -91,8 +94,8 @@ h4 {
 
 .footer {
     position: fixed;
-    bottom: 5px;
-    width: 87%;
+    bottom: 0;
+    width: 1060px;
     height: 40px;
     background-color:black;
     
