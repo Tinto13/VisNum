@@ -48,7 +48,7 @@ h4 {
     
 }
 #hauteur{
-    height: 250px;
+    height: 230px;
     margin-top: 0px;
 }
 #colorbutton1{
@@ -79,4 +79,30 @@ h4 {
 #dataVisual02{
 
      border: thin solid grey;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 86%;
+    height: 60px;
+    background-color:black;
+    
+ }
+#textFooter1{
+    font-size: 15px;
+    color:white;
+    font-weight: normal;
+    position: absolute;
+	bottom: 15px;
+    left: 15px;
+    font-style: italic;
+}
+#textFooter2{
+    font-size: 15px;
+    color:white;
+    font-weight: bold;
+    position: absolute;
+	bottom: 15px;
+    right: 15px;
+    font-style: italic;
 }
