@@ -70,10 +70,23 @@ h4 {
     background-color: rgb(172, 169, 165);
 }
 #textAnnee{
+    background-color: whitesmoke;
     font-size: 15px;
     font-weight: bold;
-    text-decoration : underline;
+    color:rgba(128, 32, 218, 0.986);
+    position: absolute;
+	top: 250px;
+    right: 15px;
         
+}
+#textAnnee{
+   
+    animation: slot 1s infinite;
+}
+@keyframes slot{
+    0%{opacity: 1;}
+    50%{opacity:0;}
+    100%{opacity: 1;}
 }
 
 .footer {
@@ -107,3 +120,5 @@ h4 {
     right : 15px;
     
 }
+
+
