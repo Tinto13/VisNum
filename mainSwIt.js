@@ -91,40 +91,40 @@ function loadData (data) {
         .domain([0, d3.max(data, d => d.param*2)]);
 
         // groupage pour préparer et passer les barres 
-        radbBars = svg.append('g')
-            .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")"); // centrage dynamique du graphe
-        
-        // groupage pour préparer et passer les titres des barres
-        radbTitles = svg.append("g")
-            .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
+    radbBars = svg.append('g')
+        .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")"); // centrage dynamique du graphe
+    
+    // groupage pour préparer et passer les titres des barres
+    radbTitles = svg.append("g")
+        .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
 
-        // groupage pour préparer et passer les valeurs dans les barres
-        radbValues = svg.append("g")
-            .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
+    // groupage pour préparer et passer les valeurs dans les barres
+    radbValues = svg.append("g")
+        .attr("transform", "translate(" + width / 2 + "," + ( height/2-radbTopMargin)+ ")") // centrage dynamique du graphe
 
-        // Dessin de la grille radar
+    // Dessin de la grille radar
 
-        let radarGrid = d3.scaleLinear()
-            .domain([0,10])
-            .range([0,450]);
-        
-        let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8];
+    let radarGrid = d3.scaleLinear()
+        .domain([0,10])
+        .range([0,450]);
+    
+    let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8];
 
-        radarSteps.forEach(d =>
-        svg.append("circle")
-            .attr("cx", width/2)
-            .attr("cy", height/2-radbTopMargin)
-            .attr("fill", "none")
-            .attr("stroke", "white")
-            .style("opacity", 0.5)
-            .attr("r", radarGrid(d))
+    radarSteps.forEach(d =>
+    svg.append("circle")
+        .attr("cx", width/2)
+        .attr("cy", height/2-radbTopMargin)
+        .attr("fill", "none")
+        .attr("stroke", "white")
+        .style("opacity", 0.5)
+        .attr("r", radarGrid(d))
     );
-        // ajout cercle central pour cacher les caractères %
-        svg.append("circle")
-            .attr("cx", width/2)
-            .attr("cy", height/2-radbTopMargin)
-            .attr("fill", "rgb(161, 217, 252)")
-            .attr("r", innerRadius)
+    // ajout cercle central pour cacher les caractères %
+    svg.append("circle")
+        .attr("cx", width/2)
+        .attr("cy", height/2-radbTopMargin)
+        .attr("fill", "rgb(161, 217, 252)")
+        .attr("r", innerRadius)
 
 // Appel de la fonction de dessin du graphe
     graphRadBar();
