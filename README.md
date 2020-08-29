@@ -12,11 +12,11 @@ Etudiant : Jacinto Fernandez
 
 ## Résumé du projet :
 
-Le projet VisNum vise à utiliser la bibliothèque graphique D3.js pour réaliser une application graphique dans le cadre du cours Unil "Visualisation de données" du semestre de printemps 2020. Nous allons ainsi permettre la visualisation sous forme de graphes au format "Radial bars" de l'utilisation privée d'Internet par les ménages suisses. Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique pour les années 2010, 2014, 2017 et 2019. © OFS - Encyclopédie statistique de la Suisse.**
+Le projet VisNum vise à utiliser la bibliothèque graphique D3.js pour réaliser une application graphique dans le cadre du cours Unil "Visualisation de données" du semestre de printemps 2020. Nous allons ainsi permettre la visualisation sous forme de graphes au format "Radial bars" de l'utilisation privée d'Internet par les ménages suisses. Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique (OFS) pour les années 2010, 2014, 2017 et 2019. © OFS - Encyclopédie statistique de la Suisse.**
 
 ## Project abstract :
 
-The VisNum project aims to develop a graphical application based on D3.js graphical library use as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. The data used come from the **Omnibus TIC surveys of the Federal Statistical Office for the years 2010, 2014, 2017 and 2019. © OFS - Encyclopédie statistique de la Suisse.**
+The VisNum project aims to develop a graphical application based on D3.js graphical library use as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. The data used come from the **Omnibus TIC surveys of the Federal Statistical Office (OFS) for the years 2010, 2014, 2017 and 2019. © OFS - Encyclopédie statistique de la Suisse.**
 
 _____________________________________________________________________________________________________________________________________
 
@@ -48,7 +48,7 @@ ________________________________________________________________________________
 ### 2.3) Données
 
 Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique (OFS) pour les années 2010, 2014, 2017 et 2019. © OFS - Encyclopédie statistique de la Suisse.**
-L'exploitation de ces données est soumise à des conditions légales qui sont disponibles sur le site de l'OFS et dont un extrait est aussi disponible dans le fichier OFSdata copyright.txt disponible dans ce README. Certaines données sont soumises à des conditions d'interprétation. Prière de consulter les fichiers d'origine ou les conditions des enquêtes sur le site Web de l'OFS pour tous les détails. 
+L'exploitation de ces données est soumise à des conditions légales qui sont disponibles sur le site de l'OFS et dont un extrait est aussi disponible dans le fichier OFSdata copyright.txt disponible dans ce README : https://github.com/Tinto13/VisNum/blob/master/OFSdata%20copyright.txt. Certaines données sont soumises à des conditions d'interprétation. Prière de consulter les fichiers d'origine ou les conditions des enquêtes sur le site Web de l'OFS pour tous les détails. 
 4 fichiers ont été téléchargés du site de l'OFS en format Excel le 14 Avril 2020 ( un pour chacune des années où l'enquête a été effectuée ) desquels nous avons extrait un certain nombre de données que nous avons ensuite regroupées dans 4 fichiers au format CSV pour servir de fichiers d'entrée pour l'application Visnum. Certaines données manquantes ou indéterminées ont été remplacées par une valeur vide et il est donc possible que certaines valeurs n'apparaissent ainsi pas sur les graphes.
 _____________________________________________________________________________________________________________________________________
 
