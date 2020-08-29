@@ -12,11 +12,11 @@ Etudiant : Jacinto Fernandez
 
 ## Résumé du projet :
 
-Le projet VisNum vise à utiliser la bibliothèque graphique D3.js pour réaliser une application graphique dans le cadre du cours Unil "Visualisation de données" du semestre de printemps 2020. Nous allons ainsi permettre la visualisation sous forme de graphes au format "Radial bars" de l'utilisation privée d'Internet par les ménages suisses. Les données utilisées sont issues des Enquêtes Omnibus TIC de l'Office Fédéral de la statistique pour les années 2010, 2014, 2017 et 2019. L'utilisation de ces données est soumise à des termes légaux qui sont fournis dnas le fichiersoumises à 
+Le projet VisNum vise à utiliser la bibliothèque graphique D3.js pour réaliser une application graphique dans le cadre du cours Unil "Visualisation de données" du semestre de printemps 2020. Nous allons ainsi permettre la visualisation sous forme de graphes au format "Radial bars" de l'utilisation privée d'Internet par les ménages suisses. Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique pour les années 2010, 2014, 2017 et 2019.**
 
 ## Project abstract :
 
-The VisNum project aims to develop a graphical application with the D3.js graphical library as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. 
+The VisNum project aims to develop a graphical application with the D3.js graphical library as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. The data used come from the **Omnibus TIC surveys of the Federal Statistical Office for the years 2010, 2014, 2017 and 2019.**
 
 _____________________________________________________________________________________________________________________________________
 
@@ -50,6 +50,7 @@ Le projet comprend les phases suivantes :
 _____________________________________________________________________________________________________________________________________
 ## 3) Sources diverses
 
+L'exploitation de ces données est soumise à des termes légaux qui sont disponibles aur le site Web de l'OFS .
 Code/données
 _____________________________________________________________________________________________________________________________________
 
