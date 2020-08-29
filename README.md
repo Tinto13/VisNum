@@ -36,7 +36,7 @@ ________________________________________________________________________________
 
 ## 1) Le projet VisNum en bref 
 
-En partant de plusieurs fichiers de données en format Excel il faut créer une application avec le framework graphique D3.js pour pouvoir visualiser différents jeux de données sous forme de diagrammes "Radial bars" divers avec différents critères de regroupement.
+En partant de plusieurs fichiers de données en format Excel il faut créer une application avec le framework graphique D3.js pour pouvoir visualiser différents jeux de données sous forme de diagrammes "Radial bars" divers avec différents critères de regroupement des données.
 _____________________________________________________________________________________________________________________________________
 
 ## 2) Sources diverses
@@ -45,26 +45,11 @@ ________________________________________________________________________________
 
 ### 2.2) Sources documentation et code
 
-**Exemples de réalisation D3.js:** 
+### 2.3) Données
 
-https://observablehq.com/@d3/radial-stacked-bar-chart de Mike Bostock
-
-https://www.d3-graph-gallery.com/graph/circular_barplot_basic.html
-
-https://medium.com/better-programming/a-beginners-guide-to-d3-js-962a3234f76
-
-**Tutoriels D3 :**
-
-Building shapes in d3.js (d3.arc) : https://www.d3-graph-gallery.com/graph/shape.html
-
-Spider graph : https://yangdanny97.github.io/blog/2019/03/01/D3-Spider-Chart
-
-Circular barplot in d3.js : https://www.d3-graph-gallery.com/graph/circular_barplot_basic.html
-
-### 2.2) Sources de données
-
-L'exploitation de ces données est soumise à des termes légaux qui sont disponibles aur le site Web de l'OFS .
-Code/données
+Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique (OFS) pour les années 2010, 2014, 2017 et 2019. © OFS - Encyclopédie statistique de la Suisse.**
+L'exploitation de ces données est soumise à des conditions légales qui sont disponibles sur le site de l'OFS et dont un extrait est aussi disponible dans le fichier xxx disponible dans ce README. Certaines données sont soumises à des conditions d'interprétation. Prière de consulter les fichiers d'origine ou les conditions des enquêtes sur le site Web de l'OFS pour tous les détails. 
+4 fichiers ont été téléchargés du site de l'OFS en format Excel le 14 Avril 2020 ( un pour chacune des années où l'enquête a été effectuée ) desquels nous avons extrait un certain nombre de données que nous avons ensuite regroupées dans 4 fichiers au format CSV pour servir de fichiers d'entrée pour l'application Visnum. Certaines données manquantes ou indéterminées ont été remplacées par une valeur vide et il est donc possible que certaines valeurs n'apparaissent ainsi pas sur les graphes.
 _____________________________________________________________________________________________________________________________________
 
 ## 3) Plan du projet VisNum :
