@@ -2,7 +2,7 @@
 Projets de visualisation de données UNIL
 
 
-## Cours Unil : Visualisation de données (WORK IN PROGRESS)
+## Cours Unil : Visualisation de données (P2020)
 
 **Professeur :** Loïc Cattani   
 
@@ -36,8 +36,7 @@ ________________________________________________________________________________
 
 ## 1) Le projet VisNum en bref 
 
-Le projet VisNum est une application écrite avec le framework D3.js 
-
+En partant de plusieurs fichiers de données en format Excel il faut créer une application avec le framework graphique D3.js pour pouvoir visualiser différents jeux de données sous forme de diagrammes "Radial bars" divers avec différents critères de regroupement.
 _____________________________________________________________________________________________________________________________________
 
 ## 2) Plan du projet VisNum :
