@@ -104,17 +104,16 @@ ________________________________________________________________________________
 
 ## 5) Brève description de l'architecture de l'app. VisNum :
 
-Les principaux composants de l'application NUA sont :
+Les principaux composants de l'application VisNum sont :
 
 1. Framework D3.js
-
+2. Bootstrap pour 
 3. Le style de l'application est contenu dans le fichier main.css
-4. Certains éléments (icônes) sont tirés de la librairie Google disponible sous : https://fonts.googleapis.com/icon?family=Material+Icons
-3. Git, Github et Gihub desktop pour le versioning de l'application ainsi que pour la coordination du codage par le team
+4. Git, Github et Gihub desktop pour le versioning de l'application ainsi que pour la coordination du codage par le team
 
 _____________________________________________________________________________________________________________________________________
 
-## 6) Pages et fonctionnalités principales de l'application NUA :
+## 6) Pages et fonctionnalités principales de l'application VisNum :
 
 Les pages principales de la version prototype disponibles sont :
 
