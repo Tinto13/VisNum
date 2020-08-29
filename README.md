@@ -16,7 +16,7 @@ Le projet VisNum vise à utiliser la bibliothèque graphique D3.js pour réalise
 
 ## Project abstract :
 
-The VisNum project aims to develop a graphical application with the D3.js graphical library as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. The data used come from the **Omnibus TIC surveys of the Federal Statistical Office for the years 2010, 2014, 2017 and 2019.**
+The VisNum project aims to develop a graphical application based on D3.js graphical library use as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. The data used come from the **Omnibus TIC surveys of the Federal Statistical Office for the years 2010, 2014, 2017 and 2019.**
 
 _____________________________________________________________________________________________________________________________________
 
