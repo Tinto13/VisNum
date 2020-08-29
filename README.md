@@ -23,8 +23,8 @@ ________________________________________________________________________________
 ## Plan de la documentation :
 
 1) Le projet VisNum en bref
-2) Plan du projet VisNum
-3) Sources diverses
+2) Sources diverses
+3) Plan du projet VisNum
 4) Design de l'application
 5) Brève description de l'architecture de l'app. VisNum
 6) Pages et fonctionnalités principales de l'application VisNum 
@@ -39,18 +39,19 @@ ________________________________________________________________________________
 En partant de plusieurs fichiers de données en format Excel il faut créer une application avec le framework graphique D3.js pour pouvoir visualiser différents jeux de données sous forme de diagrammes "Radial bars" divers avec différents critères de regroupement.
 _____________________________________________________________________________________________________________________________________
 
-## 2) Plan du projet VisNum :
+## 2) Sources diverses
+
+L'exploitation de ces données est soumise à des termes légaux qui sont disponibles aur le site Web de l'OFS .
+Code/données
+_____________________________________________________________________________________________________________________________________
+
+## 3) Plan du projet VisNum :
 
 Le projet comprend les phases suivantes :
 
 1.  Définition du projet
 2.  Préparation des données
 
-_____________________________________________________________________________________________________________________________________
-## 3) Sources diverses
-
-L'exploitation de ces données est soumise à des termes légaux qui sont disponibles aur le site Web de l'OFS .
-Code/données
 _____________________________________________________________________________________________________________________________________
 
 ## 4) Design de l'application :
