@@ -41,6 +41,28 @@ ________________________________________________________________________________
 
 ## 2) Sources diverses
 
+### 2.1) Sources académiques
+
+### 2.2) Sources documentation et code
+
+**Exemples de réalisation D3.js:** 
+
+https://observablehq.com/@d3/radial-stacked-bar-chart de Mike Bostock
+
+https://www.d3-graph-gallery.com/graph/circular_barplot_basic.html
+
+https://medium.com/better-programming/a-beginners-guide-to-d3-js-962a3234f76
+
+**Tutoriels D3 :**
+
+Building shapes in d3.js (d3.arc) : https://www.d3-graph-gallery.com/graph/shape.html
+
+Spider graph : https://yangdanny97.github.io/blog/2019/03/01/D3-Spider-Chart
+
+Circular barplot in d3.js : https://www.d3-graph-gallery.com/graph/circular_barplot_basic.html
+
+### 2.2) Sources de données
+
 L'exploitation de ces données est soumise à des termes légaux qui sont disponibles aur le site Web de l'OFS .
 Code/données
 _____________________________________________________________________________________________________________________________________
