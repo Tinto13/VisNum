@@ -12,11 +12,15 @@ Etudiant : Jacinto Fernandez
 
 ## Résumé du projet :
 
-Le projet VisNum vise à utiliser la bibliothèque graphique D3.js pour réaliser une application graphique dans le cadre du cours Unil "Visualisation de données" du semestre de printemps 2020. Nous allons ainsi permettre la visualisation sous forme de graphes au format "Radial bars" de l'utilisation privée d'Internet par les ménages suisses. Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique (OFS) pour les années 2010, 2014, 2017 et 2019. © OFS - Encyclopédie statistique de la Suisse.**
+Le projet VisNum vise à utiliser la bibliothèque graphique D3.js pour réaliser une application graphique dans le cadre du cours Unil "Visualisation de données" du semestre de printemps 2020. Nous allons ainsi permettre la visualisation sous forme de graphes au format "Radial bars" de l'utilisation privée d'Internet par les ménages suisses. 
+
+Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique (OFS) pour les années 2010, 2014, 2017 et 2019. © OFS - Encyclopédie statistique de la Suisse.**
 
 ## Project abstract :
 
-The VisNum project aims to develop a graphical application based on D3.js graphical library use as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. The data used come from the **Omnibus TIC surveys of the Federal Statistical Office (OFS) for the years 2010, 2014, 2017 and 2019. © OFS - Encyclopédie statistique de la Suisse.**
+The VisNum project aims to develop a graphical application based on D3.js graphical library use as part of the Unil "Visualisation de données" course. We will so allow the vizualisation of Internet use in Swiss households with Radial Bar visualisation diagrams. 
+
+The data used come from the **Omnibus TIC surveys of the Federal Statistical Office (OFS) for the years 2010, 2014, 2017 and 2019. © OFS - Encyclopédie statistique de la Suisse.**
 
 _____________________________________________________________________________________________________________________________________
 
@@ -47,7 +51,7 @@ La source de documentation principale a consisté dans le cours "Unil - Visualis
 
 ### 2.2) Sources documentation et code
 
-De nombreux tutoriels et exemples de réalisations D3.js disponibles sur le Web et plus particulièrement certains exemples de Graphiques "Radial Bars" de Mike Bostock m'ont aussi servi d'inspiration dans le cadre du projet.
+De nombreux tutoriels et exemples de réalisations D3.js disponibles sur le Web et plus particulièrement certains exemples de Graphiques "Radial Bars" de Mike Bostock m'ont aussi servi d'inspiration et de motivation dans le cadre du projet.
 
 ### 2.3) Données
 
@@ -65,8 +69,10 @@ ________________________________________________________________________________
 
 Le projet comprend les phases suivantes :
 
-1.  Définition du projet
-2.  Préparation des données
+1.    Définition du projet : Choix des formes graphiques et des sources de données
+2.    Préparation des données
+2.1   Choix et analyse des données disponibles
+2.2   Téléchargement des données d'origine, en l'occurrence 4 fichiers en format tableur Excel pour les 4 années où des enquêtes ont été faites par l'OFS : soeint les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dnas ce Github dans le folder Datafiles.
 
 _____________________________________________________________________________________________________________________________________
 
