@@ -43,7 +43,11 @@ ________________________________________________________________________________
 
 ### 2.1) Sources académiques
 
+La source de documentation principale a consisté dans le cours "Unil - Visualisation de données (P2020)" du Professeur Loic Cattani assisté de Loris Rimaz. Je tiens à les remercier ici de leur excellent travail qui s'est avéré particulièrement difficile au vu des conditions dues à la pandémie Covid et aux mesures sanitaires nécessaires. Nonobstant les cours ont pu se dérouler à distance et les vidéos qu'ils ont créées pour appuyer et illustrer les cours, disponibles sur Moodle, m'ont été fort utiles pour ce projet.
+
 ### 2.2) Sources documentation et code
+
+De nombreux tutoriels et exemples de réalisations D3.js disponibles sur le Web et plus particulièrement certains exemples de Graphiques "Radial Bars" de Mike Bostock m'ont aussi servi d'inspiration dans le cadre du projet.
 
 ### 2.3) Données
 
