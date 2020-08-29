@@ -120,6 +120,13 @@ function loadData (data) {
             .attr("r", radarGrid(d))
     );
 
+         // ajout cercle central pour cacher les caractères %
+        svg.append("circle")
+            .attr("cx", width/2)
+            .attr("cy", height/2-radbTopMargin)
+            .attr("fill", "rgb(161, 217, 252)")
+            .attr("r", innerRadius)
+
 // Appel de la fonction de dessin du graphe
     graphRadBar();
 
@@ -133,7 +140,7 @@ function graphRadBar () {
     // Echelle de couleur
     radColor = d3.scaleSequential()
         .domain([0, d3.max(radbData, d => d.param)])
-        .interpolator(d3.interpolateHsl("yellow","blue"));
+        .interpolator(d3.interpolateHsl("yellow","lightblue"));
     
     // ajout du groupe des segments (barres) circulaires
     radbBars.selectAll("path" )
@@ -179,10 +186,10 @@ function graphRadBar () {
         .append("g")
             //.attr("text-anchor", function(d) { return (radbScalex(d.nomaxe) + radbScalex.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
             .attr("text-anchor", "middle")
-            .attr("transform", function(d) { return "rotate(" + ((radbScalex(d.nomaxe) + radbScalex.bandwidth() / 2) * 180 / Math.PI - 90) + ")"+"translate(" + (radbScaley(d['param'])-15) + ",0)"; })
+            .attr("transform", function(d) { return "rotate(" + ((radbScalex(d.nomaxe) + radbScalex.bandwidth() / 2) * 180 / Math.PI - 90) + ")"+"translate(" + (radbScaley(d['param'])-25) + ",0)"; })
             .append("text")
             //.text(d => d.param)
-            .text(d => d.param)
+            .text(d => d.param+"%")
             .attr("transform", function(d) { return (radbScalex(d.nomaxe) + radbScalex.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
             .attr("fill", "black")
             .style("font-size", "14px")
