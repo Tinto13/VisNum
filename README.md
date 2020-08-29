@@ -79,25 +79,31 @@ Choix des formes graphiques et des sources de données
 #### 3.2.1    Choix et analyse des données disponibles
 #### 3.2.2    Téléchargement des données d'origine
 
-4 fichiers en format tableur Excel pour chacune des 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés dans le fichier Excel : Omnibus 20102019.xlsx.
+4 fichiers en format tableur Excel pour chacune des 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés soous forme de feuilles Excel dans le fichier : Omnibus 20102019.xlsx.
 
 #### 3.2.3    Elimination et regroupement des données non désirées
 
-Nous avons regroupe les données conservées dans une feuille Excel pour chaque année dans le fichier Omnibus 20102019.xlsx.
+Nous avons regroupé les données conservées dans une feuille Excel pour chaque année dans le fichier Omnibus 20102019.xlsx comme suit :
 
-Les rubriques d'utilisation conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne. Pour des contraintes d'affichage nous avons raccourci les noms de la plupart de ces rubriques mais en veillant à ne pas en dénaturer les sens innitial.
+Les rubriques d'utilisation d'Internet conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne. Pour des contraintes d'affichage nous avons raccourci les noms de la plupart de ces rubriques mais en veillant à ne pas en dénaturer le sens initial.
 
-Nous avons aussi éliminé avec Excel certaines catégories d'utilisateurs que nous ne voulions pas garder dans le cadre de ce projet veut pas garder pour conserver les 9 suivantes : nb de personnes, Total : en % de la population âgée de 15 ans et plus, Total (en % des internautes / p4 : sans les nsp/pdr), Personnes âgées de 15 à 29 ans, Personnes âgées de 30 à 59 ans, Personnes âgées de 60 ans et plus, Habitants de Suisse alémanique, Habitants de Suisse romande, Habitants de Suisse italienne
+Nous avons aussi éliminé avec Excel certaines catégories d'utilisateurs que nous ne voulions pas garder dans le cadre de ce projet pour conserver les 9 suivantes : Nombre de personnes, Total en % de la population âgée de 15 ans et plus, Total en % des internautes, Personnes âgées de 15 à 29 ans, Personnes âgées de 30 à 59 ans, Personnes âgées de 60 ans et plus, Habitants de Suisse alémanique, Habitants de Suisse romande, Habitants de Suisse italienne
 
 #### 3.2.4    Adaptation des fichiers au format csv :
 
-Les 4 feuilles Excel sont sauvées chacune dans un fichier annuel au format csv avec l'aide d'Excel, les fichiers sont prêts pour l'utilisation par l'application Visnum.
+Chacune des 4 feuilles Excel est copiée dans un fichier annuel au format csv avec l'aide d'Excel, les fichiers sont ainsi prêts pour l'utilisation par l'application.
 
-### 3.4 Stockage des fichiers annuels csv :
+### 3.3 Stockage des fichiers annuels csv :
 
-Les 4 fichiers "2010 csv.csv", "2014 csv.csv", "2017 csv.csv" et "2019 csv.csv" sont disponibles dans ce Github dans le folder Datafiles pour leur utilisation par l'appllication VisNum.
+Les 4 fichiers "2010 csv.csv", "2014 csv.csv", "2017 csv.csv" et "2019 csv.csv" sont disponibles dans ce Github dans le folder Datafiles pour leur utilisation par l'application.
 
+### 3.4       Codage de l'application
 
+### 3.5       Tests de l'application
+
+### 3.6       Documentation de l'application
+
+_____________________________________________________________________________________________________________________________________
 
 ## 4) Design de l'application :
 
