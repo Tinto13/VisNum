@@ -123,7 +123,7 @@ function loadData (data) {
         .domain([0,10])
         .range([0,450]);
         
-    let radarSteps = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8];
+    let radarSteps = [,,,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8];
 
     radarSteps.forEach(d =>
         svg.append("circle")
@@ -161,7 +161,7 @@ function graphRadBar () {
     // Echelle de couleur
     radColor = d3.scaleSequential()
         .domain([0, d3.max(radbData, d => d.param)])
-        .interpolator(d3.interpolateHsl("yellow","blue"));
+        .interpolator(d3.interpolateHsl("azure","lavenderblush"));
     
     // ajout du groupe des segments (barres) circulaires
     radbBars.selectAll("path")
