@@ -40,14 +40,14 @@ ________________________________________________________________________________
 
 ## 1) Le projet VisNum en bref 
 
-En partant de plusieurs fichiers de données en format Excel il faut créer une application avec le framework graphique D3.js pour pouvoir visualiser différents jeux de données sous forme de diagrammes "Radial bars" divers avec différents critères de regroupement des données.
+Dans le projet VisNum nous allons créer une application avec le framework graphique D3.js pour charger des données statistiques issues de plusieurs fichiers en format Excel et de les visualiser sous forme de diagrammes "Radial bars" en invoquant différents critères de regroupement et d'affichage.
 _____________________________________________________________________________________________________________________________________
 
 ## 2) Sources diverses
 
 ### 2.1) Sources académiques
 
-La source de documentation principale a consisté dans le cours "Unil - Visualisation de données (P2020)" du Professeur Loic Cattani assisté de Loris Rimaz. Je tiens à les remercier ici de leur excellent travail qui s'est avéré particulièrement difficile au vu des conditions dues à la pandémie Covid et aux mesures sanitaires nécessaires. Nonobstant les cours ont pu se dérouler à distance et les vidéos qu'ils ont créées pour appuyer et illustrer les cours, disponibles sur Moodle, m'ont été fort utiles pour ce projet.
+La source de formation et de documentation principale a consisté dans le cours "Unil - Visualisation de données (P2020)" du Professeur Loic Cattani assisté de Loris Rimaz. Je tiens à les remercier ici de leur excellent travail qui s'est avéré particulièrement difficile au vu des conditions dues à la pandémie Covid et aux mesures sanitaires nécessaires. Nonobstant les cours ont pu se dérouler à distance et les vidéos qu'ils ont créées pour appuyer et illustrer les cours, disponibles sur Moodle, m'ont été fort utiles pour ce projet.
 
 ### 2.2) Sources documentation et code
 
@@ -56,9 +56,10 @@ De nombreux tutoriels et exemples de réalisations D3.js disponibles sur le Web 
 ### 2.3) Données
 
 Les données utilisées sont issues des **Enquêtes Omnibus TIC de l'Office Fédéral de la statistique (OFS) pour les années 2010, 2014, 2017 et 2019. © OFS - Encyclopédie statistique de la Suisse.**
-L'exploitation de ces données est soumise à des conditions légales qui sont disponibles sur le site de l'OFS et dont un extrait est aussi disponible dans le fichier OFSdata copyright.txt disponible dans ce README : https://github.com/Tinto13/VisNum/blob/master/OFSdata%20copyright.txt. 
 
-Certaines données sont soumises à des conditions d'interprétation. Prière de consulter les fichiers d'origine ou les conditions des enquêtes sur le site Web de l'OFS pour tous les détails. 
+L'exploitation de ces données est soumise à des conditions légales qui sont disponibles sur le site de l'OFS et dont un extrait est aussi à disposition dans le fichier OFSdata copyright.txt disponible dans ce Github sous : https://github.com/Tinto13/VisNum/blob/master/OFSdata%20copyright.txt. 
+
+Certaines données sont soumises à des conditions d'interprétation et de restrictions. Prière de consulter les fichiers d'origine ou les conditions des enquêtes sur le site Web de l'OFS pour tous les détails. 
 
 4 fichiers ont été téléchargés du site de l'OFS en format Excel le 14 Avril 2020 ( un pour chacune des années où l'enquête a été effectuée ) desquels nous avons extrait un certain nombre de données que nous avons ensuite regroupées dans 4 fichiers au format CSV pour servir de fichiers d'entrée pour l'application Visnum. 
 
@@ -78,24 +79,25 @@ Choix des formes graphiques et des sources de données
 #### 3.2.1    Choix et analyse des données disponibles
 #### 3.2.2    Téléchargement des données d'origine
 
-En l'occurrence 4 fichiers en format tableur Excel pour les 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés dans le fichier Excel : Omnibus 20102019.xlsx.
+4 fichiers en format tableur Excel pour chacune des 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés dans le fichier Excel : Omnibus 20102019.xlsx.
 
 #### 3.2.3    Elimination et regroupement des données non désirées
 
-On regroupe les données conservées dans une feuille Excel pour chaque année dans le fichier Omnibus 20102019.xlsx.
+Nous avons regroupe les données conservées dans une feuille Excel pour chaque année dans le fichier Omnibus 20102019.xlsx.
 
-Les rubriques d'utilisation conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne.
+Les rubriques d'utilisation conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne. Pour des contraintes d'affichage nous avons raccourci les noms de la plupart de ces rubriques mais en veillant à ne pas en dénaturer les sens innitial.
 
-On élimine aussi avec Excel les catégories d'utilisateurs que l'on ne veut pas garder pour conserver les 9 suivantes : nb de personnes, Total : en % de la population âgée de 15 ans et plus, Total (en % des internautes / p4 : sans les nsp/pdr), Personnes âgées de 15 à 29 ans, Personnes âgées de 30 à 59 ans, Personnes âgées de 60 ans et plus, Habitants de Suisse alémanique, Habitants de Suisse romande, Habitants de Suisse italienne
+Nous avons aussi éliminé avec Excel certaines catégories d'utilisateurs que nous ne voulions pas garder dans le cadre de ce projet veut pas garder pour conserver les 9 suivantes : nb de personnes, Total : en % de la population âgée de 15 ans et plus, Total (en % des internautes / p4 : sans les nsp/pdr), Personnes âgées de 15 à 29 ans, Personnes âgées de 30 à 59 ans, Personnes âgées de 60 ans et plus, Habitants de Suisse alémanique, Habitants de Suisse romande, Habitants de Suisse italienne
 
 #### 3.2.4    Adaptation des fichiers au format csv :
 
-Les 4 feuilles Excel sont sauvées chaune dans un fichier annuel au format Csv avec l'aide d'Excel, les fichiers sont prêts pour l'utilisation par l'application Visnum.
+Les 4 feuilles Excel sont sauvées chacune dans un fichier annuel au format csv avec l'aide d'Excel, les fichiers sont prêts pour l'utilisation par l'application Visnum.
 
 ### 3.4 Stockage des fichiers annuels csv :
 
-Les 4 fichiers sont stockés dans le folder Datafiles pour tout utilisation ultérieure
-_____________________________________________________________________________________________________________________________________
+Les 4 fichiers "2010 csv.csv", "2014 csv.csv", "2017 csv.csv" et "2019 csv.csv" sont disponibles dans ce Github dans le folder Datafiles pour leur utilisation par l'appllication VisNum.
+
+
 
 ## 4) Design de l'application :
 
