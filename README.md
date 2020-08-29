@@ -69,11 +69,13 @@ ________________________________________________________________________________
 
 Le projet comprend les phases suivantes :
 
-1.    Définition du projet : Choix des formes graphiques et des sources de données
-2.    Préparation des données
-2.1   Choix et analyse des données disponibles
-2.2   Téléchargement des données d'origine, en l'occurrence 4 fichiers en format tableur Excel pour les 4 années où des enquêtes ont été faites par l'OFS : soeint les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dnas ce Github dans le folder Datafiles.
+###3.1       Définition du projet : Choix des formes graphiques et des sources de données
+###3.2       Préparation des données
+####3.2.1    Choix et analyse des données disponibles
+####3.2.2    Téléchargement des données d'origine, en l'occurrence 4 fichiers en format tableur Excel pour les 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés dans le fichier Excel : Omnibus 20102019.xlsx.
+####3.2.3    Elimination des données non désirées pour le projet et regroupement des données conservées dans une feuille Excel pour chaque année dans le fichier Omnibus 20102019.xlsx.
 
+Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne
 _____________________________________________________________________________________________________________________________________
 
 ## 4) Design de l'application :
