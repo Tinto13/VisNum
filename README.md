@@ -63,7 +63,7 @@ Certaines données sont soumises à des conditions d'interprétation et de restr
 
 4 fichiers ont été téléchargés du site de l'OFS en format Excel le 14 Avril 2020 ( un pour chacune des années où l'enquête a été effectuée ) desquels nous avons extrait un certain nombre de données que nous avons ensuite regroupées dans 4 fichiers au format CSV pour servir de fichiers d'entrée pour l'application Visnum. 
 
-Certaines données manquantes ou indéterminées ont été remplacées par une valeur vide et il est donc possible que certaines valeurs n'apparaissent ainsi pas sur les graphes.
+Certaines données manquantes ou non représentatives ont été remplacées par une valeur vide et il est donc possible que certaines valeurs n'apparaissent ainsi pas sur les graphes.
 _____________________________________________________________________________________________________________________________________
 
 ## 3) Plan du projet VisNum :
