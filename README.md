@@ -133,7 +133,7 @@ L'objectif principal tait d'utiliser le framework D3.js, de ce fait on a fait ap
 7.    **d3.axisleft:**        Dessin d'un axe (pas utilisé)
 8.    **d3.scaleLinear:**     Dessin du Radargrid
 9.    **d3.scaleSequential:** Préparation de l'échelle de couleurs pour les barres
-1.0   **d3.interpolateHsl:**  Détermination des couleurs selon valeus Hsl
+10.   **d3.interpolateHsl:**  Détermination des couleurs selon valeus Hsl
 11.   **d3.arc:**             Dessin des arcs
 
 ### 4.2  Pages html :
