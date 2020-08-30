@@ -183,13 +183,20 @@ ________________________________________________________________________________
 
 ## 7) Evolution du projet VisNum :
 
+La première évolution serait d'optimiser le code en utilisant plus le passage de paramètres saisis sur le  menu de la home page html à un seul programme js. 
+
+On pourrait aussi certainement continuer le reengineering du code js pour optimiser les phases de chargement du code et ainsi assurer des bonnes performances si on venait à devoir charger des fichiers de données de plus grandes tailles que ceux utilisés ici.
+
+Optimiser les affichages des graphes avec par exemple l'affichage de plusieurs années sur un même graphe.
+
+Aussi peut-être optimiser les styles et les couleurs et rendre dynamiques les affichages pour parexemple s'adapterà l'utilisation de devices différents.
 
 
 _____________________________________________________________________________________________________________________________________
 
 ## 8) Conclusion :
 
-
+Le format "Radial bar" m'a paru bien plus difficile à utiliser que les formats d'histogrammes plus classiques ce qui a rendu le projet encore plus intéressant.
 
 
 _____________________________________________________________________________________________________________________________________
