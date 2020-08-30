@@ -139,6 +139,7 @@ L'objectif principal est d'utiliser le framework D3.js, de ce fait on a fait app
 9.    **d3.scaleSequential:** Préparation de l'échelle de couleurs pour les barres
 10.   **d3.interpolateHsl:**  Détermination des couleurs selon valeus Hsl
 11.   **d3.arc:**             Dessin des arcs
+12.   **d3.select.on:**       Détection de l'évènement change sur le menu déroulant du choix des années à afficher
 
 ### 4.2  Pages html :
 
