@@ -69,6 +69,10 @@ function loadData (data) {
     txtTitre.innerHTML = "Statistiques en nombre de personnes pour l'année : "+nameInFile;
     document.body.appendChild(txtTitre);
 
+    let txtTitre1 = document.getElementById("textAnnee1");
+    txtTitre1.innerHTML = "Statistiques en nombre de personnes pour l'année : "+nameInFile;
+    document.body.appendChild(txtTitre1);
+
    // création du svg au moyen d'une div
    let svg = d3.select("#dataVisual02")
       .append("svg")

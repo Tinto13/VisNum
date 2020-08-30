@@ -98,7 +98,25 @@ h4 {
     50%{opacity:0;}
     100%{opacity: 1;}
 }
-
+#textAnnee1{
+    background-color:steelblue;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+	top: 1150px;
+    left: 15px;
+        
+}
+#textAnnee1{
+   
+    animation: slot 1s infinite;
+}
+@keyframes slot{
+    0%{opacity: 1;}
+    50%{opacity:0;}
+    100%{opacity: 1;}
+}
 .footer {
     position: fixed;
     bottom: 0;
