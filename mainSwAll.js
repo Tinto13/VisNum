@@ -30,14 +30,15 @@ outerRadius = Math.min(width, height) / 2;
 
 nameInFile = "2010";
 
-// activation par le choix de l'année voulue
-document.getElementById("annee").addEventListener("change", function (e) {
-    
-    nameInFile = e.target.value;
-    console.log("Année : " + e.target.value);
+
+// Evènement D3 pour lire l'année choisie ds le menu déroulant
+
+d3.select("#annee").on('change',(e)=> {
+
+    nameInFile = d3.event.target.value;
+    console.log("Année : " + nameInFile);
     startInputFile();
 });
-
 
 // Lecture du ficher csv d'input et utilisation de la fonction callback
 function startInputFile(){
