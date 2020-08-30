@@ -72,22 +72,25 @@ Le projet comprend les phases suivantes :
 
 ### 3.1       Définition du projet : 
 
-Choix des formes graphiques et des sources de données
+Choix des formes graphiques, du type de données et des sources de données disponibles.
 
-### 3.2       Préparation des données
+### 3.2       Préparation des données :
 
-#### 3.2.1    Choix et analyse des données disponibles
-#### 3.2.2    Téléchargement des données d'origine
+#### 3.2.1    Choix et analyse des données disponibles :
 
-4 fichiers en format tableur Excel pour chacune des 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés soous forme de feuilles Excel dans le fichier : Omnibus 20102019.xlsx.
+Sur le base du choix du domaine del'utilisation privée d'Interet dans les ménages suisses il a fallu déterminer les rubriques et les catégories  parmi les données diponibles dans les fichiers originels et aussi que ces donées étaient autant que possible disponibles pur les 4 années où des enquêtes ont eu lieu.
 
-#### 3.2.3    Elimination et regroupement des données non désirées
+#### 3.2.2    Téléchargement des données d'origine :
+
+4 fichiers en format tableur Excel ont été téléchargés du site Web de l'OFS le 14 Avril 2020 correpondant à chacune des 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés sous forme de feuilles Excel dans le fichier : Omnibus 20102019.xlsx.
+
+#### 3.2.3    Elimination et regroupement des données non désirées :
 
 Nous avons regroupé les données conservées dans une feuille Excel pour chaque année dans le fichier Omnibus 20102019.xlsx comme suit :
 
-Les rubriques d'utilisation d'Internet conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne. Pour des contraintes d'affichage nous avons raccourci les noms de la plupart de ces rubriques mais en veillant à ne pas en dénaturer le sens initial.
+Les rubriques d'utilisation d'Internet conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne. Pour des contraintes d'affichage des graphes, nous avons raccourci les noms de la plupart de ces rubriques mais en veillant à ne pas en dénaturer le sens initial.
 
-Nous avons aussi éliminé avec Excel certaines catégories d'utilisateurs que nous ne voulions pas garder dans le cadre de ce projet pour conserver les 9 suivantes : Nombre de personnes, Total en % de la population âgée de 15 ans et plus, Total en % des internautes, Personnes âgées de 15 à 29 ans, Personnes âgées de 30 à 59 ans, Personnes âgées de 60 ans et plus, Habitants de Suisse alémanique, Habitants de Suisse romande, Habitants de Suisse italienne
+Nous avons aussi éliminé avec Excel certaines catégories d'utilisateurs que nous ne voulions pas garder dans le cadre de ce projet pour conserver les 9 suivantes : Nombre de personnes, Total en % de la population âgée de 15 ans et plus, Total en % des internautes, Personnes âgées de 15 à 29 ans, Personnes âgées de 30 à 59 ans, Personnes âgées de 60 ans et plus, Habitants de Suisse alémanique, Habitants de Suisse romande, Habitants de Suisse italienne.
 
 #### 3.2.4    Adaptation des fichiers au format csv :
 
@@ -97,7 +100,19 @@ Chacune des 4 feuilles Excel est copiée dans un fichier annuel au format csv av
 
 Les 4 fichiers "2010 csv.csv", "2014 csv.csv", "2017 csv.csv" et "2019 csv.csv" sont disponibles dans ce Github dans le folder Datafiles pour leur utilisation par l'application.
 
-### 3.4       Codage de l'application
+### 3.4       Codage de l'application :
+
+Le codage a été fait de manière progressive de manière àbien pouvoir assimiler l'utilisation de D3.js. Chaque étape importante a fait l'objet du développement d'un programme particulier. Tous ceux-ci figurent dans la liste ci-dessous et sont également disponibles dans ce Github dans le folder TestPrograms :
+
+1. RadialBarTestsV02.html : Familiarisation avec D3.arc et lecture de données dans un tableau
+2. testsThen.html : Familiarisation avec la lecture de données dans un fichier csv
+3. TestsRadarGrid.html : Dessin de lignes et d'axes de type "Radargrid"
+4. RadialBarTestV04.html : Graphe "Radial Bars" complet avec lecture de données dans un fichier csv
+5. TestCleanCode.html : reengineering du code avec séparation en différentes fonctions
+6. TestCleanCodeV01.html : split en différents modules html, js et css
+7. main.html puis Index.html : application finale avec appel des modules html pour les différentes staatistiques et choix de l'année désirée
+
+Dans tous les cas les styles sont définis dans le fichier main.css.
 
 ### 3.5       Tests de l'application
 
