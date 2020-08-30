@@ -122,23 +122,24 @@ ________________________________________________________________________________
 
 L'objectif principal tait d'utiliser le framework D3.js, de ce fait on a fait appel aux fonctionnalités D3.js.
 
-4.1. Framework D3.js
+4.1. Modules/fonctions du framework D3.js:
 
-4.1.1   d3.csv:             Lecture des données depuis les fichiers csv
-4.1.2   d3.select.remove:   Clean-up des svg avant un nouvel affichage
-4.1.3   d3.select:          Affichage du graphe sur une div 
-4.1.4   d3.scaleBand:       Echelle x du graphe (positionnement des barres sur le cercle de 0 à 2Pi)
-4.1.5   d3.scaleRadial:     Echelle y du graphe (hauteur des barres)
-4.1.6   d3.max:             Détermination de la valeur maximum d'un set de données
-4.1.7   d3.axisleft:        Dessin d'un axe (pas utilisé)
-4.1.8   d3.scaleLinear:     Dessin du Radargrid
-4.1.9   d3.scaleSequential: Préparation de l'échelle de couleurs pour les barres
-4.1.10  d3.interpolateHsl:  Détermination des couleurs selon valeus Hsl
-4.1.11  d3.arc:             Dessin des arcs
+1.   d3.csv:             Lecture des données depuis les fichiers csv
+2.   d3.select.remove:   Clean-up des svg avant un nouvel affichage
+3.   d3.select:          Affichage du graphe sur une div 
+4.   d3.scaleBand:       Echelle x du graphe (positionnement des barres sur le cercle de 0 à 2Pi)
+5.   d3.scaleRadial:     Echelle y du graphe (hauteur des barres)
+6.   d3.max:             Détermination de la valeur maximum d'un set de données
+7.   d3.axisleft:        Dessin d'un axe (pas utilisé)
+8.   d3.scaleLinear:     Dessin du Radargrid
+9.   d3.scaleSequential: Préparation de l'échelle de couleurs pour les barres
+10.  d3.interpolateHsl:  Détermination des couleurs selon valeus Hsl
+11.  d3.arc:             Dessin des arcs
 
 4.2  Bootstrap a été utilisé pour la définition des pages html
-4.3  Tous les styles de l'application sont contenus dans le fichier main.css
-4.4  Github et Gihub desktop pour le versioning de l'application ainsi que pour la coordination du codage par le team
+4.3  Tous les styles de l'application sont contenus dans le fichier main.css 
+4.4  Composants js et html pour les programmes correspondants
+4.5  Github et Github desktop pour le versioning de l'application et des fichiers de données
 _____________________________________________________________________________________________________________________________________
 
 ## 5) Design et fonctionnalités principales de l'application VisNum :
