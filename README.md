@@ -154,24 +154,32 @@ ________________________________________________________________________________
 
 ## 5) Design et fonctionnalités principales de l'application VisNum :
 
-Les principaux composants de l'application VisNum sont :
+L'application est constituée par le programme **index.html** qui fait office de Home page et qui contient un menu de 9 boutons permettant chacun de choisir la catégorie d'utilisateurs pour laquelle on souhaite afficher les statistiques d'utilisation privée d'Internet en faisant appel à un des 9 programmes ci-dessous :
 
+1. **mainNbPers.html :** Statistiques en nombre total de personnes
+2. **mainTotPopul.html :** Statistiques en % de la population totale
+3. **mainTotInt.html :** Statistiques en % des Internautes
+4. **mainSwRom.html :** Statistiques en % des habitants de Suisse Romande
+5. **mainSwAll.html :** Statistiques en % des habitants de Suisse Allemande
+6. **mainSwIt.html :** Statistiques en % des habitants de Suisse Italienne
+7. **mainAge1529.html :** Statistiques en % des personnes âgées de 15 à 29 ans
+8. **mainAge3059.html :** Statistiques en % des personnes âgées de 30 à 59 ans
+9. **mainAge60plus.html :** Statistiques en % des personnes âgées de plus de 60 ans
 
-
-
-Les fonctionnalités principales sont :
+Chacun des ces 9 programmes fait appel à son programme homonyme .js qui assure l'affichage des graphes "Radial Bars" de la catégorie choisie et correspondant à l'une des 4 années disponibles dans un menu déroulant qui s'affiche avec la page html. Le retour à la Home page est toujours possible à l'aide d'un bouton ad-hoc. La légende de chacun des graphes est assurée par un affichage clignotant rappelent le titre de la statistique et l'année correspondate.
 _____________________________________________________________________________________________________________________________________
 
 ## 6) Documentation et mode d'emploi :
 
 L'application VisNum est "self-explanatory" et l'information fournie sur ce README fait office de mode d'emploi. 
-**Il suffit d'appler le fichier index.html pour actives l'application.**
+
+**Il suffit d'appeler le fichier index.html pour activer l'application.**
 
 _____________________________________________________________________________________________________________________________________
 
 ## 7) Evolution du projet VisNum :
 
-En fonction du temps à disposition des fonctionnalités supplémentaires telles que définies dans le full-version design viendront s'ajouter à celles présentes dans la version prototype.
+
 
 _____________________________________________________________________________________________________________________________________
 
