@@ -187,9 +187,9 @@ La première évolution serait d'optimiser le code en utilisant plus le passage 
 
 On pourrait aussi certainement continuer le reengineering du code js pour optimiser les phases de chargement du code et ainsi assurer des bonnes performances si on venait à devoir charger des fichiers de données de plus grandes tailles que ceux utilisés ici.
 
-Optimiser les affichages des graphes avec par exemple l'affichage de plusieurs années sur un même graphe.
+Optimiser en rendant plus réactifs les affichages des graphes avec par exemple l'affichage de plusieurs années sur un même graphe.
 
-Aussi peut-être optimiser les styles et les couleurs et rendre dynamiques les affichages pour parexemple s'adapterà l'utilisation de devices différents.
+Aussi optimiser les styles et les couleurs et rendre dynamiques les affichages pour, par exemple, s'adapter à l'utilisation de devices différents.
 
 
 _____________________________________________________________________________________________________________________________________
