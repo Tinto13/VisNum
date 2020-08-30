@@ -1,5 +1,5 @@
 # VisNum
-Projets de visualisation de données UNIL
+Projet de visualisation de données UNIL.
 
 
 ## Cours Unil : Visualisation de données (P2020)
@@ -39,7 +39,7 @@ ________________________________________________________________________________
 
 ## 1) Le projet VisNum en bref 
 
-Dans le projet VisNum nous allons créer une application avec le framework graphique D3.js pour charger des données statistiques issues de plusieurs fichiers en format Excel et de les visualiser sous forme de diagrammes "Radial bars" en invoquant différents critères de regroupement et d'affichage.
+Dans le projet VisNum nous allons créer une application avec le framework graphique D3.js pour charger des données statistiques issues de plusieurs fichiers en format Excel et les visualiser sous forme de diagrammes "Radial bars" en invoquant différents critères de regroupement et d'affichage.
 _____________________________________________________________________________________________________________________________________
 
 ## 2) Sources diverses
@@ -69,31 +69,35 @@ ________________________________________________________________________________
 
 Le projet comprend les phases suivantes :
 
-### 3.1       Définition du projet : 
+### 3.1       Analyse et définition du projet : 
 
-Choix des formes graphiques, du type de données et des sources de données disponibles.
+Choix des formes graphiques, du type de données et des sources de données disponibles. Définition des objectifs et du périmèttre du projet.
 
 ### 3.2       Préparation des données :
 
 #### 3.2.1    Choix et analyse des données disponibles :
 
-Sur le base du choix du domaine del'utilisation privée d'Interet dans les ménages suisses il a fallu déterminer les rubriques et les catégories  parmi les données diponibles dans les fichiers originels et aussi que ces donées étaient autant que possible disponibles pur les 4 années où des enquêtes ont eu lieu.
+Sur le base du choix du domaine de l'utilisation privée d'Internet dans les ménages suisses il a fallu déterminer les rubriques et les catégories  parmi les données diponibles dans les fichiers originels et aussi vérifier que ces données étaient bien collectées pour les 4 années où les enquêtes ont eu lieu.
 
 #### 3.2.2    Téléchargement des données d'origine :
 
-4 fichiers en format tableur Excel ont été téléchargés du site Web de l'OFS le 14 Avril 2020 correpondant à chacune des 4 années où des enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés sous forme de feuilles Excel dans le fichier : Omnibus 20102019.xlsx.
+4 fichiers en format tableur Excel ont été téléchargés du site Web de l'OFS le 14 Avril 2020 correspondant à chacune des 4 années où les enquêtes ont été faites par l'OFS : soient les années 2010, 2014, 2017 et 2019. Ces 4 fichiers initiaux sont fournis dans ce Github dans le folder Datafiles regroupés sous forme de feuilles Excel dans le fichier : Omnibus 20102019.xlsx.
 
 #### 3.2.3    Elimination et regroupement des données non désirées :
 
 Nous avons regroupé les données conservées dans une feuille Excel pour chaque année dans le fichier Omnibus 20102019.xlsx comme suit :
 
-Les rubriques d'utilisation d'Internet conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne. Pour des contraintes d'affichage des graphes, nous avons raccourci les noms de la plupart de ces rubriques mais en veillant à ne pas en dénaturer le sens initial.
+Les rubriques d'utilisation d'Internet conservées sont les 18 suivantes  : Communiquer par courrier électronique,	Chercher des informations sur biens ou services,	Lire ou consulter les nouvelles,	Consulter Internet dans le but d'apprendre,	Rechercher des informations en relation avec la santé,	Acheter/commander des produits (biens ou services),	Utiliser des services en relation avec des voyages,	Faire du e-banking,	Télécharger ou regarder des films ou des vidéos,	Télécharger ou écouter de la musique, Ecouter la radio ou regarder la TV,	Créer/actualiser son profil sur un réseau social,	Téléphoner ou video-conférences,	Rechercher un emploi,	Jouer en ligne ou télécharger des jeux , Vendre des produits,	S'exprimer lors de campagnes politiques, Suivre des cours en ligne. 
+
+Pour des contraintes d'affichage des graphes, nous avons raccourci les noms de la plupart de ces rubriques mais en veillant à ne pas en dénaturer le sens initial.
 
 Nous avons aussi éliminé avec Excel certaines catégories d'utilisateurs que nous ne voulions pas garder dans le cadre de ce projet pour conserver les 9 suivantes : Nombre de personnes, Total en % de la population âgée de 15 ans et plus, Total en % des internautes, Personnes âgées de 15 à 29 ans, Personnes âgées de 30 à 59 ans, Personnes âgées de 60 ans et plus, Habitants de Suisse alémanique, Habitants de Suisse romande, Habitants de Suisse italienne.
 
+Toujours avec l'aide d'Excel nous avons inversé les lignes et colonnes pour obtenir le format désiré pour le traitement par l'application.
+
 #### 3.2.4    Adaptation des fichiers au format csv :
 
-Chacune des 4 feuilles Excel est copiée dans un fichier annuel au format csv avec l'aide d'Excel, les fichiers sont ainsi prêts pour l'utilisation par l'application.
+Chacune de ces 4 feuilles Excel est finalement copiée dans un fichier annuel nommé "YYYY csv.csv" au format csv avec l'aide d'Excel, les fichiers sont ainsi prêts pour l'utilisation par l'application.
 
 ### 3.3 Stockage des fichiers annuels csv :
 
@@ -101,13 +105,13 @@ Les 4 fichiers "2010 csv.csv", "2014 csv.csv", "2017 csv.csv" et "2019 csv.csv" 
 
 ### 3.4       Codage de l'application :
 
-Le codage a été fait de manière progressive de manière àbien pouvoir assimiler l'utilisation de D3.js. Chaque étape importante a fait l'objet du développement d'un programme particulier. Tous ceux-ci figurent dans la liste ci-dessous et sont également disponibles dans ce Github dans le folder TestPrograms :
+Le codage a été fait de manière progressive de manière à bien pouvoir assimiler l'utilisation de D3.js. Chaque étape importante a fait l'objet du développement d'un programme individuel. Tous ceux-ci figurent dans la liste ci-dessous et sont également disponibles dans ce Github dans le folder TestPrograms :
 
 1. RadialBarTestsV02.html : Familiarisation avec D3.arc et lecture de données dans un tableau
 2. testsThen.html : Familiarisation avec la lecture de données dans un fichier csv
 3. TestsRadarGrid.html : Dessin de lignes et d'axes de type "Radargrid"
 4. RadialBarTestV04.html : Graphe "Radial Bars" complet avec lecture de données dans un fichier csv
-5. TestCleanCode.html : reengineering du code avec séparation en différentes fonctions
+5. TestCleanCode.html : reengineering du code précédent avec séparation en différentes fonctions
 6. TestCleanCodeV01.html : split en différents modules html, js et css
 7. main.html puis Index.html : application finale avec appel des modules html pour les différentes staatistiques et choix de l'année désirée
 
@@ -120,7 +124,7 @@ ________________________________________________________________________________
 
 ## 4) Architecture de l'app. VisNum :
 
-L'objectif principal tait d'utiliser le framework D3.js, de ce fait on a fait appel aux fonctionnalités D3.js suivants :
+L'objectif principal est d'utiliser le framework D3.js, de ce fait on a fait appel aux fonctionnalités D3.js suivantes :
 
 ### 4.1. Modules/fonctions du framework D3.js:
 
@@ -166,12 +170,12 @@ L'application est constituée par le programme **index.html** qui fait office de
 8. **mainAge3059.html :** Statistiques en % des personnes âgées de 30 à 59 ans
 9. **mainAge60plus.html :** Statistiques en % des personnes âgées de plus de 60 ans
 
-Chacun des ces 9 programmes fait appel à son programme homonyme .js qui assure l'affichage des graphes "Radial Bars" de la catégorie choisie et correspondant à l'une des 4 années disponibles dans un menu déroulant qui s'affiche avec la page html. Le retour à la Home page est toujours possible à l'aide d'un bouton ad-hoc. La légende de chacun des graphes est assurée par un affichage clignotant rappelent le titre de la statistique et l'année correspondate.
+Chacun des ces 9 programmes fait appel à son programme homonyme .js qui assure l'affichage des graphes "Radial Bars" de la catégorie choisie et correspondant à l'une des 4 années disponibles dans un menu déroulant qui s'affiche avec la page html. Le retour à la Home page est toujours possible à l'aide d'un bouton ad-hoc. La légende de chacun des graphes est assurée par un affichage clignotant rappelent le titre de la statistique et l'année correspondante.
 _____________________________________________________________________________________________________________________________________
 
 ## 6) Documentation et mode d'emploi :
 
-L'application VisNum est "self-explanatory" et l'information fournie sur ce README fait office de mode d'emploi. 
+L'application VisNum est "self-explanatory" et l'information fournie dans ce README fait office de mode d'emploi. 
 
 **Il suffit d'appeler le fichier index.html pour activer l'application.**
 
