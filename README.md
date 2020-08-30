@@ -115,23 +115,37 @@ Dans tous les cas les styles sont définis dans le fichier main.css.
 
 ### 3.5       Tests de l'application
 
-### 3.6       Documentation de l'application
-
+Les fichiers "dummy" au format csv qui ont été créées artificiellement pour les tests des différents programmes cités ci-dessus  sont stockés dans ce Github dans le folder TestDatafiles à toutes fins utiles. Dès l'étape 6 les tests ont été exécutés avec les fichiers de données réelles YYYY csv.csv fournis dans ce Github.
 _____________________________________________________________________________________________________________________________________
 
 ## 4) Architecture de l'app. VisNum :
 
-Le design de l'application a été fait à l'aide du logiciel 
+L'objectif principal tait d'utiliser le framework D3.js, de ce fait on a fait appel aux fonctionnalités D3.js.
+
+4.1. Framework D3.js
+
+4.1.1 d3.csv:             Lecture des données depuis les fichiers csv
+4.1.2 d3.select:          Clean-up des svg avant un nouvel affichage
+4.1.3 d3.select:          Affichage du graphe sur une div 
+4.1.4 d3.scaleBand:       Echelle x du graphe (positionnement des barres sur le cercle de 0 à 2Pi)
+4.1.5 d3.scaleRadial:     Echelle y du graphe (hauteur des barres)
+4.1.6 d3.max:             Détermination de la valeur maximum d'un set de données
+4.1.7 d3.axisleft:        Dessin d'un axe (pas utilisé)
+4.1.8 d3.scaleLinear:     Dessin du Radargrid
+4.1.9 d3.scaleSequential: Préparation de l'échelle de couleurs pour les barres
+d3.interpolateHsl:        Détermination des couleurs selon valeus Hsl
+d3.arc:                   Dessin des arcs
+
+2. Bootstrap a étéutilisé pour la définition des pages html
+3. Tous les styles de l'application sont contenus dans le fichier main.css
+4. Github et Gihub desktop pour le versioning de l'application ainsi que pour la coordination du codage par le team
 _____________________________________________________________________________________________________________________________________
 
 ## 5) Design et fonctionnalités principales de l'application VisNum :
 
 Les principaux composants de l'application VisNum sont :
 
-1. Framework D3.js
-2. Bootstrap pour 
-3. Le style de l'application est contenu dans le fichier main.css
-4. Git, Github et Gihub desktop pour le versioning de l'application ainsi que pour la coordination du codage par le team
+
 
 
 Les fonctionnalités principales sont :
