@@ -29,12 +29,11 @@ ________________________________________________________________________________
 1) Le projet VisNum en bref
 2) Sources diverses
 3) Plan du projet VisNum
-4) Design de l'application
-5) Brève description de l'architecture de l'app. VisNum
-6) Pages et fonctionnalités principales de l'application VisNum 
-7) Tests et validation de l'application 
-8) Documentation et mode d'emploi 
-9) Evolution du projet VisNum 
+4) Architecture de l'app. VisNum
+5) Design et fonctionnalités principales de l'application VisNum 
+6) Documentation et mode d'emploi 
+7) Evolution du projet VisNum 
+8) Conclusion
 
 _____________________________________________________________________________________________________________________________________
 
@@ -120,12 +119,12 @@ Dans tous les cas les styles sont définis dans le fichier main.css.
 
 _____________________________________________________________________________________________________________________________________
 
-## 4) Design de l'application :
+## 4) Architecture de l'app. VisNum :
 
 Le design de l'application a été fait à l'aide du logiciel 
 _____________________________________________________________________________________________________________________________________
 
-## 5) Brève description de l'architecture de l'app. VisNum :
+## 5) Design et fonctionnalités principales de l'application VisNum :
 
 Les principaux composants de l'application VisNum sont :
 
@@ -134,33 +133,29 @@ Les principaux composants de l'application VisNum sont :
 3. Le style de l'application est contenu dans le fichier main.css
 4. Git, Github et Gihub desktop pour le versioning de l'application ainsi que pour la coordination du codage par le team
 
-_____________________________________________________________________________________________________________________________________
-
-## 6) Pages et fonctionnalités principales de l'application VisNum :
-
-Les pages principales de la version prototype disponibles sont :
-
-- Page d
 
 Les fonctionnalités principales sont :
-
-- 
-
 _____________________________________________________________________________________________________________________________________
 
-## 7) Tests et validation de l'application :
-
-Work in progress
-_____________________________________________________________________________________________________________________________________
-
-## 8) Documentation et mode d'emploi :
+## 6) Documentation et mode d'emploi :
 
 L'application VisNum est "self-explanatory" et l'information fournie sur ce README fait office de mode d'emploi.
 
 _____________________________________________________________________________________________________________________________________
 
-
-## 9) Evolution du projet VisNum :
+## 7) Evolution du projet VisNum :
 
 En fonction du temps à disposition des fonctionnalités supplémentaires telles que définies dans le full-version design viendront s'ajouter à celles présentes dans la version prototype.
+
+_____________________________________________________________________________________________________________________________________
+
+## 8) Conclusion :
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
 
