@@ -33,41 +33,21 @@
 
     <br>
 
-    <div class="row">
-
-            <a>Statistiques en nombre total de personnes</a>
-
-            <a>Statistiques en % de la population totale</a>
-
-            <a>Statistiques en % des Internautes</a>
-
-            <a>Statistiques en % des habitants de Suisse Romande</a>
-
-            <a>Statistiques en % des habitants de Suisse Allemande</a>
-
-            <a>Statistiques en % des habitants de Suisse Italienne</a>
-
-            <a>Statistiques en % des personnes âgées de 15 à 29 ans</a>
-
-            <a>Statistiques en % des personnes âgées de 30 à 59 ans</a>
-
-            <a>Statistiques en % des personnes âgées de plus de 60 ans</a>
-
-    </div>
-
     <label for="catUser">Choix de la catégorie d'utilisateurs d'Internet : </label>
     <select name="catUser" id="catUser">
         <option value="">--Choisissez svp une catégorie d'utilisateurs Internet--</option>
-        <option value="2010" >Statistiques en nombre total de personnes</option>
-        <option value="2014">Statistiques en % de la population totale</option>
-        <option value="2017">Statistiques en % des Internautes</option>
-        <option value="2019">Statistiques en % des habitants de Suisse Romande</option>
-        <option value="2019">Statistiques en % des habitants de Suisse Allemande</option>
-        <option value="2019">Statistiques en % des habitants de Suisse Italienne</option>
-        <option value="2019">Statistiques en % des personnes âgées de 15 à 29 ans</option>
-        <option value="2019">Statistiques en % des personnes âgées de 30 à 59 ans</option>
-        <option value="2019">Statistiques en % des personnes âgées de plus de 60 ans</option>
+        <option value="NbPers">Statistiques en nombre total de personnes</option>
+        <option value="TotPopul">Statistiques en % de la population totale</option>
+        <option value="TotInt">Statistiques en % des Internautes</option>
+        <option value="SwRom">Statistiques en % des habitants de Suisse Romande</option>
+        <option value="SwAll">Statistiques en % des habitants de Suisse Allemande</option>
+        <option value="SwIt">Statistiques en % des habitants de Suisse Italienne</option>
+        <option value="Age1529">Statistiques en % des personnes âgées de 15 à 29 ans</option>
+        <option value="Age3059">Statistiques en % des personnes âgées de 30 à 59 ans</option>
+        <option value="Age60plus">Statistiques en % des personnes âgées de plus de 60 ans</option>
     </select>
+
+    <br>
 
     <label for="annee">Choix de l'année : </label>
     <select name="annee" id="annee">
@@ -79,14 +59,7 @@
     </select>
 
     <script src="main.js"></script>
-    
-    <button onclick="goBack()" type="button" class="btn btn-primary btn-lg" id="retHomePage">Retour Menu principal</button>
 
-    <script>
-        function goBack() {
-          window.history.back();
-        }
-    </script>
 
     <div id="dataVisual02">
 
@@ -95,13 +68,27 @@
 
     </div>
 
-    <div class="footer">
-        
-        <div id="textFooter1">Cours Unil - Visualisation de données (P2020)</div>
+    
+    <!--
+    <button onclick="goBack()" type="button" class="btn btn-primary btn-lg" id="retHomePage">Retour Menu principal</button>
 
-        <div id="textFooter2">Août 2020</div>
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
+    
+
+    <div class="footer">
+    
+    <div id="textFooter1">Cours Unil - Visualisation de données (P2020)</div>
+
+    <div id="textFooter2">Août 2020</div>
 
     </div>
+
+    -->
+    
 
 </div>
 

@@ -14,7 +14,7 @@ let radbData;
 let radbScalex;
 let radbScaley;
 let nameInFile;
-let nameVar;
+let nameCat;
 
 // éléments du graphe, barres et titres
 let radbBars;
@@ -27,24 +27,33 @@ let radbTeinte;
 radbTopMargin = 50;
 outerRadius = Math.min(width, height) / 2;  
 
-nameInFile = "2010 csv";
+nameInFile = "2010";
+//nameCat = "NbPers";
 
 // Evènement D3 pour lire l'année choisie ds le menu déroulant
+d3.select("#catUser").on('change',(e)=> {
+
+        nameCat = d3.event.target.value;
+        console.log("Catégorie d'utilisateur : " + nameCat);
+
+        startInputFile();
+});
 
 d3.select("#annee").on('change',(e)=> {
 
     nameInFile = d3.event.target.value;
-    console.log("Année : " + nameInFile);
+    console.log("Catégorie d'utilisateur : " + nameCat);
     startInputFile();
 });
 
 // Lecture du ficher csv d'input et utilisation de la fonction callback
 function startInputFile(){
+
     console.log("impression1"+nameInFile);
     d3.csv(`DataFiles/${nameInFile} csv.csv`, function (d) {
     return {
         nomaxe: d.Nomaxe,
-        param: d.NbPers
+        param: d[nameCat]
         }
 
     }).then(loadData);
