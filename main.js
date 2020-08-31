@@ -28,17 +28,18 @@ radbTopMargin = 50;
 outerRadius = Math.min(width, height) / 2;  
 
 nameInFile = "2010";
-//nameCat = "NbPers";
+nameCat = "NbPers";
 
-// Evènement D3 pour lire l'année choisie ds le menu déroulant
+// Evènement D3 pour lire la catégorie d'utilisateur choisie ds le menu déroulant
 d3.select("#catUser").on('change',(e)=> {
 
-        nameCat = d3.event.target.value;
-        console.log("Catégorie d'utilisateur : " + nameCat);
+    nameCat = d3.event.target.value;
+    console.log("Catégorie d'utilisateur : " + nameCat);
 
-        startInputFile();
+    startInputFile();
 });
 
+// Evènement D3 pour lire l'année choisie ds le menu déroulant
 d3.select("#annee").on('change',(e)=> {
 
     nameInFile = d3.event.target.value;
