@@ -159,32 +159,20 @@ ________________________________________________________________________________
 
 ## 5) Design et fonctionnalités principales de l'application VisNum :
 
-L'application est constituée par le programme **index.html** qui fait office de Home page et qui contient un menu de 9 boutons permettant chacun de choisir la catégorie d'utilisateurs pour laquelle on souhaite afficher les statistiques d'utilisation privée d'Internet en faisant appel à un des 9 programmes ci-dessous :
-
-1. **mainNbPers.html :** Statistiques en nombre total de personnes
-2. **mainTotPopul.html :** Statistiques en % de la population totale
-3. **mainTotInt.html :** Statistiques en % des Internautes
-4. **mainSwRom.html :** Statistiques en % des habitants de Suisse Romande
-5. **mainSwAll.html :** Statistiques en % des habitants de Suisse Allemande
-6. **mainSwIt.html :** Statistiques en % des habitants de Suisse Italienne
-7. **mainAge1529.html :** Statistiques en % des personnes âgées de 15 à 29 ans
-8. **mainAge3059.html :** Statistiques en % des personnes âgées de 30 à 59 ans
-9. **mainAge60plus.html :** Statistiques en % des personnes âgées de plus de 60 ans
-
-Chacun des ces 9 programmes fait appel à son programme homonyme .js qui assure l'affichage des graphes "Radial Bars" de la catégorie choisie et correspondant à l'une des 4 années disponibles dans un menu déroulant qui s'affiche avec la page html. Le retour à la Home page est toujours possible à l'aide d'un bouton ad-hoc. La légende de chacun des graphes est assurée par un affichage clignotant rappelent le titre de la statistique et l'année correspondante.
+L'application est constituée par le programme **indexOpt.html** qui affiche un entête ainsi que deux menus déroulants permettant de choisir la catégorie d'utilisateurs d'Internet pour laquelle on veut afficher le graphe ainsi que de choisir parmi les 4 années où les enquêtes ont eu lieu. Ceprogramme fait appel au programme main.js pour toutes les fonctionnalités dont le dessin des différents graphes selon les choix. Les styles ont définis dans le fichier main.css.
 _____________________________________________________________________________________________________________________________________
 
 ## 6) Documentation et mode d'emploi :
 
 L'application VisNum est "self-explanatory" et l'information fournie dans ce README fait office de mode d'emploi. 
 
-**Il suffit d'appeler le fichier index.html pour activer l'application.**
+**Il suffit d'appeler le fichier indexOpt.html pour activer l'application.**
 
 _____________________________________________________________________________________________________________________________________
 
 ## 7) Evolution du projet VisNum :
 
-La première évolution serait d'optimiser le code en utilisant plus le passage de paramètres saisis sur le  menu de la home page html à un seul programme js. 
+La première évolution serait de finaliser ce code en peaufinant encore plus le passage de paramètres saisis sur le  menu de la home page html à un seul programme js. 
 
 On pourrait aussi certainement continuer le reengineering du code js pour optimiser les phases de chargement du code et ainsi assurer des bonnes performances si on venait à devoir charger des fichiers de données de plus grandes tailles que ceux utilisés ici.
 
