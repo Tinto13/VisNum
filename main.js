@@ -89,7 +89,7 @@ function loadData (data) {
 
    // affichage de la légende du graphe et de l'année correspondante
 
-   titre="Statistiques en nombre de personnes pour l'année : ";
+   titre="Statistiques pour l'année : ";
 
    console.log(tabTitres);
  
@@ -195,7 +195,8 @@ function graphRadBar () {
     // Echelle de couleur
     radColor = d3.scaleSequential()
         .domain([0, d3.max(radbData, d => d.param)])
-        .interpolator(d3.interpolateHsl("azure","lavenderblush"));
+        //.interpolator(d3.interpolateHsl("azure","lavenderblush"));
+        .interpolator(d3.interpolateHsl("yellow","lightblue"));
     
     // ajout du groupe des segments (barres) circulaires
     radbBars.selectAll("path")
