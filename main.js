@@ -91,6 +91,10 @@ function loadData (data) {
 
    titre="Statistiques en nombre de personnes pour l'année : ";
 
+   console.log(tabTitres);
+ 
+    
+
    let txtTitre = document.getElementById("textAnnee");
     txtTitre.innerHTML = titre+nameInFile;
     document.body.appendChild(txtTitre);
