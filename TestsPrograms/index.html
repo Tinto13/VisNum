@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation RADIAL BARS </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="UseBootstrap.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Load d3.js -->
+  
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale.v3.min.js"></script>
+
+<div class="container" id=contValues>
+
+    <div class="page-header" id="pageCouleur">
+        <h2>Diagramme Radial Bar de visualisation de l'utilisation privée d'Internet dans les ménages suisses</h2>
+        <h4>(Radial Bar visualisation diagram of Internet use in Swiss households)</h4>
+        
+        <p> Data Source : Office fédéral de la statistique, Enquête Omnibus TIC
+            , data copy 14/04/2020, Enquêtes effectuées pour les années: 2010, 2014, 2017 et 2019.
+        </p>
+        <p>© OFS - Encyclopédie statistique de la Suisse</p>
+        <p1>Certaines données sont soumises à des conditions d'interprétation.</p1>
+        <p1>Prière de consulter les fichiers d'origine ou les conditions des enquêtes pour tous les détails.</p1>
+        
+    </div>
+
+    <br>
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <h3>Choix par population :</h3>
+            <a href="mainNbPers.html" class="btn btn-info" id="colorbutton1">Statistiques en nombre total de personnes</a>
+
+            <br><br>
+
+            <a href="mainTotPopul.html" class="btn btn-info" id="colorbutton1">Statistiques en % de la population totale</a>
+
+            <br><br>
+
+            <a href="mainTotInt.html" class="btn btn-info" id="colorbutton1">Statistiques en % des Internautes</a>
+
+
+        </div>
+
+        <div class="col-md-3">
+
+            <h3>Choix par géographie :</h3>
+
+            <a href="mainSwRom.html" class="btn btn-info" id="colorbutton2">Statistiques en % des habitants de Suisse Romande</a>
+
+            <br><br>
+
+            <a href="mainSwAll.html" class="btn btn-info" id="colorbutton2">Statistiques en % des habitants de Suisse Allemande</a>
+
+            <br><br>
+
+            <a href="mainSwIt.html" class="btn btn-info" id="colorbutton2">Statistiques en % des habitants de Suisse Italienne</a>
+
+
+        </div>
+
+        <div class="col-md-4">
+
+            <h3>Choix par tranches d'âge :</h3>
+
+            <a href="mainAge1529.html" class="btn btn-info" id="colorbutton3">Statistiques en % des personnes âgées de 15 à 29 ans</a>
+
+            <br><br>
+
+            <a href="mainAge3059.html" class="btn btn-info" id="colorbutton3">Statistiques en % des personnes âgées de 30 à 59 ans</a>
+
+            <br><br>
+
+            <a href="mainAge60plus.html" class="btn btn-info" id="colorbutton3">Statistiques en % des personnes âgées de plus de 60 ans</a>
+
+
+        </div>
+
+     
+    </div>
+
+
+    <div class="footer">
+        
+        <div id="textFooter1">Cours Unil - Visualisation de données (P2020)</div>
+
+        <div id="textFooter2">Août 2020</div>
+
+    </div>
+
+</div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</body>
+ 
+</html>
