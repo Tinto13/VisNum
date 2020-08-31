@@ -27,8 +27,21 @@ let radbTeinte;
 radbTopMargin = 50;
 outerRadius = Math.min(width, height) / 2;  
 
+// initialisation de la catégorie d'utilisateurs et de l'année
 nameInFile = "2010";
 nameCat = "NbPers";
+
+const tabTitres = [
+    {titreVal: "NbPers", titreTexte: "Statistiques en nombre total de personnes"},
+    {titreVal: "TotPopul", titreTexte :"Statistiques en % de la population totale"},
+    {titreVal: "TotInt", titreText: "Statistiques en % des Internautes"},
+    {titreVal: "SwRom", titreTexte: "Statistiques en % des habitants de Suisse Romande"},
+    {titreVal: "SwAll", titreTexte: "Statistiques en % des habitants de Suisse Allemande"},
+    {titreVal: "SwIt", titreTexte: "Statistiques en % des habitants de Suisse Italienne"},
+    {titreVal: "Age1529", titreTexte:"Statistiques en % des personnes âgées de 15 à 29 ans"},
+    {titreVal: "Age3059", titreText: "Statistiques en % des personnes âgées de 30 à 59 ans"},
+    {titreVal: "Age60plus", titreTexte: "Statistiques en % des personnes âgées de plus de 60 ans"}
+];
 
 // Evènement D3 pour lire la catégorie d'utilisateur choisie ds le menu déroulant
 d3.select("#catUser").on('change',(e)=> {
@@ -47,7 +60,7 @@ d3.select("#annee").on('change',(e)=> {
     startInputFile();
 });
 
-// Lecture du ficher csv d'input et utilisation de la fonction callback
+// Fonction de lecture du ficher csv d'input et utilisation de la fonction callback
 function startInputFile(){
 
     console.log("impression1"+nameInFile);
@@ -76,12 +89,14 @@ function loadData (data) {
 
    // affichage de la légende du graphe et de l'année correspondante
 
+   titre="Statistiques en nombre de personnes pour l'année : ";
+
    let txtTitre = document.getElementById("textAnnee");
-    txtTitre.innerHTML = "Statistiques en nombre de personnes pour l'année : "+nameInFile;
+    txtTitre.innerHTML = titre+nameInFile;
     document.body.appendChild(txtTitre);
 
     let txtTitre1 = document.getElementById("textAnnee1");
-    txtTitre1.innerHTML = "Statistiques en nombre de personnes pour l'année : "+nameInFile;
+    txtTitre1.innerHTML = titre+nameInFile;
     document.body.appendChild(txtTitre1);
 
    // création du svg au moyen d'une div
